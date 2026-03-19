@@ -1,12 +1,12 @@
 import Image from "next/image";
-import Nav from "@/src/components/nav";
+import HeroSection from '@/src/components/home/heroSection';
+import IntroSection from '@/src/components/home/introSection';
 
 export default function Home() {
   return (
-    <div>
-      <main>
-        <h1>Sophie Dutel, Artiste peintre</h1>
-      </main>
-    </div>
+    <>
+      <HeroSection />
+      <IntroSection />  
+    </>
   );
 }
