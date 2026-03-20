@@ -13,7 +13,7 @@ export default function RootLayout({
     <html lang="fr">
       <body className="text-gray-600">
         <Nav />
-          <main>
+          <main className="pt-24">
             {children}
           </main>
         <Footer />
