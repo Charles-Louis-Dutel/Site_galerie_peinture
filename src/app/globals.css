@@ -24,3 +24,19 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 } */
+
+@layer components {
+  .nav-link {
+    @apply relative;
+  }
+
+  .nav-link::after {
+    content: "";
+    @apply absolute left-0 bottom-0 w-full h-px bg-gray-500 scale-x-0 origin-right
+    transition-transform duration-500
+  }
+
+  .nav-link:hover::after {
+    @apply scale-x-100 origin-left
+  }
+}
