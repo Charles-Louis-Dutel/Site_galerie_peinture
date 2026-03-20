@@ -2,9 +2,15 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { useState } from "react";
 import '@/src/app/globals.css';
 
 export default function Nav() {
+    const [menuOpen, setMenuOpen] = useState(false);
+
+    const handleNav = () => {
+        setMenuOpen(!menuOpen);
+    }
 
     return (
         <header className="fixed top-0 left-0 w-full z-50 h-24 bg-white/80 backdrop-blur-md
@@ -20,6 +26,11 @@ export default function Nav() {
                 <div className="flex justify-end items-center gap-x-8 lg:gap-x-16">
                     <Link href="/about" className="nav-link">A propos</Link>
                     <Link href="/contact" className="nav-link">Contact</Link>
+                </div>
+                <div onClick={handleNav} className="flex justify-end items-center md:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
                 </div>
             </nav>
         </header>
