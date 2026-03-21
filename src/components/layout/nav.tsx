@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import '@/src/app/globals.css';
 
 export default function Nav() {
@@ -12,13 +12,25 @@ export default function Nav() {
         setMenuOpen(!menuOpen);
     }
 
+    useEffect(() => {
+        if (menuOpen) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "";
+        }
+
+        return (() => {
+            document.body.style.overflow = ""
+        });
+    }, [menuOpen]);
+
     return (
         <header className="fixed top-0 left-0 w-full z-50 h-24 bg-white/80 backdrop-blur-md
                 border-b border-gray-200">
             <nav className="max-w-7xl mx-auto flex justify-between px-8 lg:px-12 font-serif
                 text-gray-500 text-lg">
                 <div className="flex justify-start items-center gap-x-8 lg:gap-x-16">
-                    <Link href="/">
+                    <Link href="/" onClick={() => setMenuOpen(false)}>
                         <Image src="/images/sign.png" alt="Signature" width={150} height={50}
                             className="h-24 w-auto"/>
                     </Link>
@@ -42,8 +54,8 @@ export default function Nav() {
                     }
                 </div>
             </nav>
-            <nav className={`md:hidden absolute top-full left-0 w-full min-h-[calc(100vh-96px)] bg-white
-                border-t border-gray-200 transition-[opacity,transform] duration-300 ease-out ${
+            <nav className={`md:hidden fixed top-24 left-0 w-full h-[calc(100vh-96px)] bg-white
+                border-t border-gray-200 transition-[opacity,transform] duration-300 ease-out overflow-y-auto ${
                 menuOpen
                     ? "opacity-100 translate-y-0 pointer-events-auto"
                     : "opacity-0 translate-y-2 pointer-events-none"
