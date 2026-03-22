@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export default function introSection () {
     return (
-        <section>
+        <section className='bg-gray-50'>
             <div className='grid grid-cols-1 sm:grid-cols-2 box-content py-6'>
                 <div>
                     <p>Artiste peintre de paysages realistes</p>
