@@ -1,17 +1,15 @@
-'use client'
-
 import '@/src/app/globals.css';
 import Link from 'next/link';
 
 export default function Footer() {
     return (
-        <section>
-            <div className='max-w-7xl mx-auto m-2 px-4 lg:px-12'>
+        <footer>
+            <div className='max-w-7xl mx-auto px-4 lg:px-12'>
                 <div className='grid grid-cols-1 sm:grid-cols-4 place-items-center sm:place-items-stretch
 					py-4 md:pt-6 my-2 font-serif text-gray-500 text-center'>
                     <div className='flex flex-col gap-y-2 items-center sm:items-start order-2 sm:order-1
 						border-b sm:border-b-0 border-gray-200 py-4 sm:py-0'>
-                        <h1 className='pb-4 text-gray-600'>Contact et réseaux</h1>
+                        <h3 className='pb-4 text-gray-600'>Contact et réseaux</h3>
 						<a href="mailto:sophiedutel@gmail.com"
 						className='hover:text-black'>sophiedutel@gmail.com</a>
 						<a href="https://www.instagram.com/sophie_pierre51?igsh=MXBhbDZycGlzbGcyeQ=="
@@ -23,23 +21,23 @@ export default function Footer() {
                     </div>
                     <div className='sm:col-span-2 flex flex-col items-center order-1 sm:order-2
 						py-4 sm:py-0 sm:border-x border-b sm:border-y-0 border-gray-200'>
-                        <h1 className='text-2xl text-gray-600'>Sophie Dutel</h1>
+                        <h2 className='text-2xl text-gray-600'>Sophie Dutel</h2>
                         <p>Artiste peintre</p>
                         <div className='border border-gray-200 w-[50%] my-2'></div>
                         <p>Peintures de paysages réalistes</p>
                     </div>
                     <div className='flex flex-col sm:justify-end sm:items-end order-3 sm:text-end
 						pt-4 sm:pt-0'>
-						<Link href="/policies/legals" className='hover:text-black'>Mention légales</Link>
+						<Link href="/policies/legals" className='hover:text-black'>Mentions légales</Link>
 						<Link href="/policies/confidentiality" className='hover:text-black'>Politique de confidentialité</Link>
 						<p className='text-xs pt-4'>© 2026 Sophie Dutel - Tous droits réservés</p>
                     </div>
                 </div>
                 <div className='flex justify-center items-center py-4 md:py-6 my-2 border-t
 					border-gray-200 font-serif text-sm text-center italic'>
-                        "Chaque tableau capture la lumiere et l'emotion d'un instant."
+                        "Chaque tableau capture la lumière et l'émotion d'un instant."
                 </div>
             </div>
-        </section>
+        </footer>
     );
 }
