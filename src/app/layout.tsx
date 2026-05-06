@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Nav from '@/src/components/layout/nav';
 import Footer from '@/src/components/layout/footer';
-//import "./globals.css";
+import '@/src/app/globals.css';
 
 export default function RootLayout({
   children,
@@ -11,9 +11,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
-      <body className="text-gray-600">
+      <body className="min-h-screen flex flex-col text-gray-600">
         <Nav />
-          <main className="pt-24">
+          <main className="pt-24 flex-1">
             {children}
           </main>
         <Footer />
