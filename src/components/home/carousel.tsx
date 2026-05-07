@@ -46,8 +46,9 @@ export default function Carousel () {
         }
 
     return (
-        <div className='w-full h-full flex items-center justify-center'>
-            <div className='relative flex w-full max-w-[1800px] h-full items-center'>
+        <div className='w-full h-full flex flex-col justify-start items-center'>
+            <div className='relative flex w-full max-w-[1800] h-full items-center justify-center'
+            >
                 <button 
                     type="button"
                     onClick={prevImage}
@@ -67,12 +68,13 @@ export default function Carousel () {
                         <div 
                             key={index}
                             className={`absolute inset-0 transition-opacity duration-1000 ease-in-out
-                                ${index === currentIndex ? "opacity-100 z-10" : "opacity-0 z-0"}`}>
+                                ${index === currentIndex ? "opacity-100 z-10" : "opacity-0 z-0"}`}
+                        >
                             <Image
                                 src={slide.url}
                                 alt={slide.text} 
                                 fill
-                                className='object-fill'
+                                className='object-contain lg:object-fill'
                                 priority={index === 0}
                             />
                         </div>
@@ -91,6 +93,16 @@ export default function Carousel () {
                         <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
                     </svg>
                 </button>
+            </div>
+
+            <div className='flex flex-1 w-full justify-center items-center gap-2 m-4'>
+                    {slides.map((slides, index) => (
+                        <div key={index}
+                            className={`w-5 md:w-10 h-1 md:h-2 z-30 rounded-2xl shadow-sm shadow-gray-400
+                                    ${index === currentIndex ? "bg-gray-400" : "bg-white"}`}
+                        >
+                        </div>
+                    ))}
             </div>
         </div>
     );
