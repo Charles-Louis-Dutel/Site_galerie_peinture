@@ -26,8 +26,8 @@ export default function Nav() {
 
     return (
         <header className="fixed top-0 left-0 w-full z-50 h-24 bg-white/80 backdrop-blur-md
-                border-b border-gray-200">
-            <nav className="max-w-7xl mx-auto flex justify-between px-8 lg:px-12 font-serif
+                border-b border-gray-200 px-6 lg:px-12">
+            <nav className="max-w-7xl mx-auto flex justify-between font-serif
                 text-gray-500 text-lg">
                 <div className="flex justify-start items-center gap-x-8 lg:gap-x-16">
                     <Link href="/" onClick={() => setMenuOpen(false)}>
