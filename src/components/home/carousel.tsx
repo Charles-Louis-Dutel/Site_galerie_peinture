@@ -45,6 +45,12 @@ export default function Carousel () {
             resetTimer();
         }
 
+        function changeIndexOnClick(index: number) {
+           setCurrentIndex(index);
+           resetTimer(); 
+        }
+
+
     return (
         <div className='w-full h-full flex flex-col justify-start items-center'>
             <div className='relative flex w-full max-w-[1800] h-full items-center justify-center'
@@ -97,9 +103,11 @@ export default function Carousel () {
 
             <div className='flex flex-1 w-full justify-center items-center gap-2 m-4'>
                     {slides.map((slides, index) => (
-                        <div key={index}
+                        <div 
+                            key={index}
                             className={`w-5 md:w-10 h-1 md:h-2 z-30 rounded-2xl shadow-sm shadow-gray-400
                                     ${index === currentIndex ? "bg-gray-400" : "bg-white"}`}
+                            onClick={() => changeIndexOnClick(index)}
                         >
                         </div>
                     ))}
