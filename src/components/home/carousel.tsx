@@ -100,8 +100,12 @@ export default function Carousel () {
                     </svg>
                 </button>
 
-                <div className='hidden lg:block absolute z-20 left-14 bottom-2'>
-                    <h1 className='font-serif text-white text-center md:text-2xl italic'>
+                <div className='absolute z-20 left-6 sm:left-8 md:left-10 lg:left-20 
+                        bottom-6 sm:bottom-8 md:bottom-10 lg:bottom-20'
+                >
+                    <h1 className='font-serif text-white text-left text-xl sm:text-2xl 
+                        md:text-3xl lg:text-4xl italic text-shadow'
+                    >
                         Sophie Dutel
                         <br />
                         Peintures de paysages
