@@ -80,7 +80,7 @@ export default function Carousel () {
                                 src={slide.url}
                                 alt={slide.text} 
                                 fill
-                                className='object-contain lg:object-fill'
+                                className='object-cover lg:object-fill'
                                 priority={index === 0}
                             />
                         </div>
@@ -99,6 +99,14 @@ export default function Carousel () {
                         <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
                     </svg>
                 </button>
+
+                <div className='hidden lg:block absolute z-20 left-14 bottom-2'>
+                    <h1 className='font-serif text-white text-center md:text-2xl italic'>
+                        Sophie Dutel
+                        <br />
+                        Peintures de paysages
+                    </h1>
+                </div>
             </div>
 
             <div className='flex flex-1 w-full justify-center items-center gap-2 m-4'>

@@ -117,34 +117,42 @@
 </header>
 <!-- Hero Section -->
 <section class="relative h-screen w-full flex items-center justify-center overflow-hidden">
-<div class="absolute inset-0 z-0 scale-105">
-<img alt="Peinture de paysage" class="w-full h-full object-cover" data-alt="A large, breathtaking oil painting of a misty mountain range at dawn, rendered with visible, expressive brushstrokes. The color palette features soft earthy tones, muted sage greens, and ethereal morning light breaking through purple clouds. The style is impressionistic and organic, evoking a sense of deep tranquility and the raw majesty of wild nature in a modern gallery aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQaCoJf3U5wmKUNcQKyzi9cBv3UHAJX3x97MsqdQb-33Hm_TUg60v2b_G-_ZeaohqszjIea6ZqTWND8Ll3CgDNBaiDKNlTw3pEZ9aq1MgEAmRa2bm6UA4MfF88QtN2qBYd5fQDthBQUKadgmaELckV2pYeRMPvg4rykNAJM4hUSNmJVNRduXOh5-z9MKGnoWkP89Em4GfPLMJ2Y8OjnhIT1iYyIbqv2awl-1G_UX8cHoxMeRVCWIkV_Mxs7qfzcVzEZFc59dj92ns"/>
-<div class="absolute inset-0 bg-primary/20"></div>
-</div>
-<div class="relative z-10 text-center px-4">
-<h1 class="font-headline-display text-headline-display text-white mb-8 max-w-4xl mx-auto italic">Capturer l'âme de la nature</h1>
-<a class="inline-block bg-primary text-white font-label-sm text-label-sm py-4 px-12 tracking-widest hover:bg-primary/90 transition-all duration-500 border border-primary" href="#">
-                DÉCOUVRIR LA GALERIE
-            </a>
-</div>
-</section>
-<!-- Introduction Section -->
-<section class="max-w-[1440px] mx-auto px-4 md:px-16 py-32 grid grid-cols-1 md:grid-cols-12 gap-16 items-center">
-    <div class="md:col-span-5 relative">
-        <div class="aspect-[3/4] overflow-hidden grayscale hover:grayscale-0 transition-all duration-1000">
-            <img alt="Éléonore Dubois" class="w-full h-full object-cover" data-alt="A professional, minimalist editorial portrait of a female artist in her studio, illuminated by soft natural side-lighting. She wears a simple linen apron stained with natural pigments, standing against a clean white gallery wall. The atmosphere is quiet and contemplative, emphasizing an authentic connection between the artist and her craft, styled with high-end photography aesthetics." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIXRDIr9EwIU2VjAFdmlbcv_tfSNHqWtn5Q5OTGyXuoN36Gp5hOkEruXeumlzrZwr1Oxo_iWw7AmGGzf0QNPH7aUbbns8fTLfDX6PYNY1ifgZvUlw3Cv8lRUY0PgYoYBYHDXzucWzUE4wK8otR7SVTodEY36g_ySAc4wrAIdL-o7LXSZR-6XOz492m2whT460Lewo9tM-NHnV_dISnmPkuLomsXd22fyWcYvZyZ5F5LaWRH_bJ0LdeGAh1-1KXQ8UHyYSHerZtUhw"/>
-        </div>
-        <div class="absolute -bottom-8 -right-8 w-48 h-48 border border-outline-variant/30 hidden md:block">
+    <div class="absolute inset-0 z-0 scale-105">
+        <img alt="Peinture de paysage" class="w-full h-full object-cover" data-alt="A large, breathtaking oil painting of a misty mountain range at dawn, rendered with visible, expressive brushstrokes. The color palette features soft earthy tones, muted sage greens, and ethereal morning light breaking through purple clouds. The style is impressionistic and organic, evoking a sense of deep tranquility and the raw majesty of wild nature in a modern gallery aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQaCoJf3U5wmKUNcQKyzi9cBv3UHAJX3x97MsqdQb-33Hm_TUg60v2b_G-_ZeaohqszjIea6ZqTWND8Ll3CgDNBaiDKNlTw3pEZ9aq1MgEAmRa2bm6UA4MfF88QtN2qBYd5fQDthBQUKadgmaELckV2pYeRMPvg4rykNAJM4hUSNmJVNRduXOh5-z9MKGnoWkP89Em4GfPLMJ2Y8OjnhIT1iYyIbqv2awl-1G_UX8cHoxMeRVCWIkV_Mxs7qfzcVzEZFc59dj92ns"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-primary/60 via-primary/20 to-transparent">
         </div>
     </div>
 
-    <div class="md:col-span-6 md:col-start-7">
-        <span class="font-label-sm text-label-sm text-outline tracking-widest block mb-4 uppercase">L'Artiste</span>
-        <h2 class="font-headline-lg text-headline-lg text-primary mb-8">Une quête de lumière et d'immensité</h2>
-        <p class="font-body-lg text-body-lg text-on-surface-variant mb-8 leading-relaxed">
+    <div class="absolute bottom-[80px] left-[80px] z-10 text-left max-w-2xl">
+        <h1 class="font-headline-display text-headline-display text-white mb-8 italic drop-shadow-md">
+            Capturer l'âme de la nature
+        </h1>
+        <a class="inline-block bg-white text-primary font-label-sm text-label-sm py-4 px-12 tracking-widest hover:bg-primary hover:text-white transition-all duration-500 border border-white" href="#">
+                    DÉCOUVRIR LA GALERIE
+        </a>
+    </div>
+
+    <div class="absolute bottom-[80px] right-[80px] z-10 flex items-center gap-4">
+    
+    <div class="h-[1px] w-12 bg-white/50"></div>
+        <span class="font-label-sm text-label-sm text-white tracking-[0.2em]">01 / 04</span>
+    </div>
+</section>
+<!-- Introduction Section -->
+<section class="max-w-[1440px] mx-auto px-4 md:px-16 py-32 grid grid-cols-1 md:grid-cols-12 gap-16 items-center">
+<div class="md:col-span-5 relative">
+<div class="aspect-[3/4] overflow-hidden grayscale hover:grayscale-0 transition-all duration-1000">
+<img alt="Éléonore Dubois" class="w-full h-full object-cover" data-alt="A professional, minimalist editorial portrait of a female artist in her studio, illuminated by soft natural side-lighting. She wears a simple linen apron stained with natural pigments, standing against a clean white gallery wall. The atmosphere is quiet and contemplative, emphasizing an authentic connection between the artist and her craft, styled with high-end photography aesthetics." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIXRDIr9EwIU2VjAFdmlbcv_tfSNHqWtn5Q5OTGyXuoN36Gp5hOkEruXeumlzrZwr1Oxo_iWw7AmGGzf0QNPH7aUbbns8fTLfDX6PYNY1ifgZvUlw3Cv8lRUY0PgYoYBYHDXzucWzUE4wK8otR7SVTodEY36g_ySAc4wrAIdL-o7LXSZR-6XOz492m2whT460Lewo9tM-NHnV_dISnmPkuLomsXd22fyWcYvZyZ5F5LaWRH_bJ0LdeGAh1-1KXQ8UHyYSHerZtUhw"/>
+</div>
+<div class="absolute -bottom-8 -right-8 w-48 h-48 border border-outline-variant/30 hidden md:block"></div>
+</div>
+<div class="md:col-span-6 md:col-start-7">
+<span class="font-label-sm text-label-sm text-outline tracking-widest block mb-4 uppercase">L'Artiste</span>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-8">Une quête de lumière et d'immensité</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8 leading-relaxed">
                 Éléonore Dubois explore la frontière ténue entre le visible et le ressenti. Ses œuvres, réalisées avec des pigments naturels, traduisent la puissance silencieuse des paysages sauvages. Pour elle, peindre n'est pas seulement une reproduction, mais une immersion profonde dans l'esprit des lieux oubliés.
             </p>
-        <p class="font-body-md text-body-md text-on-surface-variant italic border-l-2 border-outline-variant/30 pl-6 py-2">
+<p class="font-body-md text-body-md text-on-surface-variant italic border-l-2 border-outline-variant/30 pl-6 py-2">
                 "Chaque coup de pinceau est un souffle, chaque couleur est une émotion capturée dans l'instant sacré de la contemplation."
             </p>
 </div>
