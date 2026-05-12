@@ -3,3 +3,5 @@
 -Modifier l'image (et les textes ?) dans la section intro 
 
 -Modifier la citation dans le footer ?
+
+-Faire une page 'Mentions legales' et 'Politique de confidentialite'

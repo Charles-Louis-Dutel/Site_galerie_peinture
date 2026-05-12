@@ -1,14 +1,18 @@
 import { paintings } from "@/src/lib/painting";
-import Link from "next/link";
+import Gallery from "@/src/components/gallery/gallery";
 
-export default function Galery() {
+export default function GalleryPage() {
     return (
-        <ul>
-            {paintings.map((painting) => (
-                <li key={painting.slug}>
-                    <Link href={`/gallery/${painting.slug}`}>{painting.title}</Link>
-                </li>
-            ))}
-        </ul>
+        <>
+            <Gallery paintings={paintings}/>
+        </>
     );
 }
+
+{/* <ul>
+    {paintings.map((painting) => (
+        <li key={painting.slug}>
+            <Link href={`/gallery/${painting.slug}`}>{painting.title}</Link>
+        </li>
+    ))}
+</ul> */}
