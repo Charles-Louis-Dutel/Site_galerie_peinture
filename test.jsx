@@ -159,42 +159,44 @@
 </section>
 <!-- Featured Works (Implied Contextual Grid) -->
 <section class="bg-surface-container-low py-32">
-<div class="max-w-[1440px] mx-auto px-4 md:px-16">
-<div class="flex justify-between items-end mb-16 border-b border-outline-variant/30 pb-8">
-<div>
-<h3 class="font-headline-md text-headline-md text-primary">SÉLECTIONS RÉCENTES</h3>
-</div>
-<a class="font-label-sm text-label-sm text-primary hover:opacity-70 transition-opacity flex items-center gap-2" href="#">
-                    VOIR TOUT <span class="material-symbols-outlined text-[16px]" data-icon="arrow_forward">arrow_forward</span>
-</a>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-<!-- Work 1 -->
-<div class="group cursor-pointer">
-<div class="aspect-square overflow-hidden mb-6">
-<img alt="Brume Marine" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A minimalist painting of a stormy coast, using charcoal greys and deep oceanic blues. The composition is stark and atmospheric, with heavy textures suggesting the spray of the sea against jagged cliffs. The lighting is moody and dramatic, captured in a clean light-mode frame for a luxury art website." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1g5inpVw8coFHVkVuwvQo1bTf8Ccp3CgvDp0TEgr6u3eXt9-UzhiVgRApXYe7U_ULjUQE1cn2B4TenL011dExSiEIUxfIUPdXjK46w0CfrnbxIxxTnjglNrYLuaB9ArTTEfbBqLGKYV1BmBKwg7_QHDGLiodRKMCE6oSZPHkiteVicId1hgA--oCYkoHu25GvC00umUVvjs1ur2nRLRbKeuvGtsl3VSs2gqurBBsMATmq-zPwh4C1L7pYvwawEg7tfvefHGHU6N8"/>
-</div>
-<h4 class="font-headline-md text-primary">Brume Marine</h4>
-<p class="font-label-sm text-on-surface-variant mt-2 uppercase tracking-widest">Huile sur Toile — 120 x 120 cm</p>
-</div>
-<!-- Work 2 -->
-<div class="group cursor-pointer mt-12 md:mt-0">
-<div class="aspect-square overflow-hidden mb-6">
-<img alt="Sous-bois Doré" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="An abstract landscape painting representing a sunlit forest floor in autumn. The palette is rich with ochre, burnt sienna, and golden highlights, painted with broad, energetic strokes. The mood is warm and inviting, evoking the scent of damp earth and crisp leaves in a modern, minimal art gallery setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfotOv0_GxxLoZsOolT7hPRgUFrI0PvMK32zFVbCzh-PpCVtybtQwUdh2hacOr4iPj32qU5KXXkJlzgTi-GzIK5J2OCWzCn7174flMejFBZlV_LUCoHEFP5e1rfBpGSe8HCqpww1FtURsBpo_d0hYf-CA5r_Ipo1oUnhELql7U-jOQi6Sm4wjP0oiAjbia0-FjMGDttiRZa23zQFSMRJ1cHxHDc838higOAL8UJMYzyeKnCWf9Pn9BdMZMkK8HXKTuf3eZo5uUm_Q"/>
-</div>
-<h4 class="font-headline-md text-primary">Sous-bois Doré</h4>
-<p class="font-label-sm text-on-surface-variant mt-2 uppercase tracking-widest">Pigments Naturels — 100 x 140 cm</p>
-</div>
-<!-- Work 3 -->
-<div class="group cursor-pointer mt-12 lg:mt-0">
-<div class="aspect-square overflow-hidden mb-6">
-<img alt="Silence d'Hiver" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A serene landscape painting of a frozen lake under a pale winter sky. Soft lavenders, cool whites, and icy blues dominate the scene, creating a sense of crystalline stillness and silence. The aesthetic is clean, sophisticated, and focused on the delicate nuances of natural light and texture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuARBVjYNw2yE3lYfPrenep2SM-ePgmRVJs8T_-6pz6rJUYSGRA1eaWObZD9P5MOjUFvFMeac1Oun9TEDrm8kz9qfoAHKk606_DyXx4tdafa_zmh2xpmkSvxAp13Kh2yKqsco-aOWJJEnvAM6Bk4i6aEhay2RDuB49NW1HqbnxLH3ujsalnArrqH06lsQ7RiYRqKxVm_PzdjyCzqZPDDNV01Qs3nq4R8DWwWpXcYdg2jH3wFVj7zZ44cUQhUXa1c9oYe5S4olAiANnk"/>
-</div>
-<h4 class="font-headline-md text-primary">Silence d'Hiver</h4>
-<p class="font-label-sm text-on-surface-variant mt-2 uppercase tracking-widest">Technique Mixte — 90 x 90 cm</p>
-</div>
-</div>
-</div>
+    <div class="max-w-[1440px] mx-auto px-4 md:px-16">
+        <div class="flex justify-between items-end mb-16 border-b border-outline-variant/30 pb-8">
+            <div>
+                <h3 class="font-headline-md text-headline-md text-primary">
+                    SÉLECTIONS RÉCENTES
+                </h3>
+            </div>
+            <a class="font-label-sm text-label-sm text-primary hover:opacity-70 transition-opacity flex items-center gap-2" href="#">
+                        VOIR TOUT <span class="material-symbols-outlined text-[16px]" data-icon="arrow_forward">arrow_forward</span>
+            </a>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+            <!-- Work 1 -->
+            <div class="group cursor-pointer">
+                <div class="aspect-square overflow-hidden mb-6">
+                    <img alt="Brume Marine" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A minimalist painting of a stormy coast, using charcoal greys and deep oceanic blues. The composition is stark and atmospheric, with heavy textures suggesting the spray of the sea against jagged cliffs. The lighting is moody and dramatic, captured in a clean light-mode frame for a luxury art website." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1g5inpVw8coFHVkVuwvQo1bTf8Ccp3CgvDp0TEgr6u3eXt9-UzhiVgRApXYe7U_ULjUQE1cn2B4TenL011dExSiEIUxfIUPdXjK46w0CfrnbxIxxTnjglNrYLuaB9ArTTEfbBqLGKYV1BmBKwg7_QHDGLiodRKMCE6oSZPHkiteVicId1hgA--oCYkoHu25GvC00umUVvjs1ur2nRLRbKeuvGtsl3VSs2gqurBBsMATmq-zPwh4C1L7pYvwawEg7tfvefHGHU6N8"/>
+                </div>
+                <h4 class="font-headline-md text-primary">Brume Marine</h4>
+                <p class="font-label-sm text-on-surface-variant mt-2 uppercase tracking-widest">Huile sur Toile — 120 x 120 cm</p>
+            </div>
+            <!-- Work 2 -->
+            <div class="group cursor-pointer mt-12 md:mt-0">
+                <div class="aspect-square overflow-hidden mb-6">
+                    <img alt="Sous-bois Doré" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="An abstract landscape painting representing a sunlit forest floor in autumn. The palette is rich with ochre, burnt sienna, and golden highlights, painted with broad, energetic strokes. The mood is warm and inviting, evoking the scent of damp earth and crisp leaves in a modern, minimal art gallery setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfotOv0_GxxLoZsOolT7hPRgUFrI0PvMK32zFVbCzh-PpCVtybtQwUdh2hacOr4iPj32qU5KXXkJlzgTi-GzIK5J2OCWzCn7174flMejFBZlV_LUCoHEFP5e1rfBpGSe8HCqpww1FtURsBpo_d0hYf-CA5r_Ipo1oUnhELql7U-jOQi6Sm4wjP0oiAjbia0-FjMGDttiRZa23zQFSMRJ1cHxHDc838higOAL8UJMYzyeKnCWf9Pn9BdMZMkK8HXKTuf3eZo5uUm_Q"/>
+                </div>
+                <h4 class="font-headline-md text-primary">Sous-bois Doré</h4>
+                <p class="font-label-sm text-on-surface-variant mt-2 uppercase tracking-widest">Pigments Naturels — 100 x 140 cm</p>
+            </div>
+            <!-- Work 3 -->
+            <div class="group cursor-pointer mt-12 lg:mt-0">
+                <div class="aspect-square overflow-hidden mb-6">
+                    <img alt="Silence d'Hiver" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A serene landscape painting of a frozen lake under a pale winter sky. Soft lavenders, cool whites, and icy blues dominate the scene, creating a sense of crystalline stillness and silence. The aesthetic is clean, sophisticated, and focused on the delicate nuances of natural light and texture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuARBVjYNw2yE3lYfPrenep2SM-ePgmRVJs8T_-6pz6rJUYSGRA1eaWObZD9P5MOjUFvFMeac1Oun9TEDrm8kz9qfoAHKk606_DyXx4tdafa_zmh2xpmkSvxAp13Kh2yKqsco-aOWJJEnvAM6Bk4i6aEhay2RDuB49NW1HqbnxLH3ujsalnArrqH06lsQ7RiYRqKxVm_PzdjyCzqZPDDNV01Qs3nq4R8DWwWpXcYdg2jH3wFVj7zZ44cUQhUXa1c9oYe5S4olAiANnk"/>
+                </div>
+                <h4 class="font-headline-md text-primary">Silence d'Hiver</h4>
+                <p class="font-label-sm text-on-surface-variant mt-2 uppercase tracking-widest">Technique Mixte — 90 x 90 cm</p>
+            </div>
+        </div>
+    </div>
 </section>
 <!-- Newsletter Section -->
 <section class="py-32 bg-surface text-center px-4">
