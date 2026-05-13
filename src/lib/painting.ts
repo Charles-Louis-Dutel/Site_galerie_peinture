@@ -5,6 +5,8 @@ export type Paintings = {
     year: number;
     width: number;
     height: number;
+    imageWidth: number;
+    imageHeight: number;
     size: string;
     medium: string;
     src: string;
@@ -23,12 +25,14 @@ export const paintings = [
         year: 2020,
         width: 80,
         height: 60,
+        imageWidth: 4080,
+        imageHeight: 3060,
         size: "60x80cm",
         medium: "Acrylique",
         src: "/images/bord_de_lac.jpg",
         alt: "Peinture de paysage",
         orientation: "landscape",
-        featured: false
+        featured: true
     },
     {
         id: "painting_002",
@@ -37,6 +41,8 @@ export const paintings = [
         year: 2023,
         width: 80,
         height: 60,
+        imageWidth: 3722,
+        imageHeight: 2880,
         size: "60x80cm",
         medium: "Acrylique",
         src: "/images/champs.jpg",
@@ -51,6 +57,8 @@ export const paintings = [
         year: 2023,
         width: 80,
         height: 60,
+        imageWidth: 3015,
+        imageHeight: 2302,
         size: "60x80cm",
         medium: "Huile sur toile",
         src: "/images/chemin_dans_les_champs.jpg",
@@ -65,12 +73,14 @@ export const paintings = [
         year: 2024,
         width: 80,
         height: 60,
+        imageWidth: 3060,
+        imageHeight: 3252,
         size: "60x80cm",
         medium: "Huile sur toile",
         src: "/images/coquelicots.jpg",
         alt: "Peinture de paysage",
         orientation: "landscape",
-        featured: false
+        featured: true
     },
     {
         id: "painting_005",
@@ -79,6 +89,8 @@ export const paintings = [
         year: 2022,
         width: 80,
         height: 60,
+        imageWidth: 3060,
+        imageHeight: 4080,
         size: "60x80cm",
         medium: "Acrylique",
         src: "/images/eglise.jpg",
@@ -93,6 +105,8 @@ export const paintings = [
         year: 2023,
         width: 80,
         height: 60,
+        imageWidth: 3462,
+        imageHeight: 2842,
         size: "60x80cm",
         medium: "Huile sur toile",
         src: "/images/plage.jpg",
@@ -107,6 +121,8 @@ export const paintings = [
         year: 2023,
         width: 80,
         height: 60,
+        imageWidth: 2471,
+        imageHeight: 3399,
         size: "60x80cm",
         medium: "Acrylique",
         src: "/images/rive_sous_arbres.jpg",
@@ -121,6 +137,8 @@ export const paintings = [
         year: 2023,
         width: 80,
         height: 60,
+        imageWidth: 3060,
+        imageHeight: 4080,
         size: "60x80cm",
         medium: "Acrylique",
         src: "/images/riviere.jpg",
@@ -135,6 +153,8 @@ export const paintings = [
         year: 2020,
         width: 80,
         height: 60,
+        imageWidth: 3060,
+        imageHeight: 3825,
         size: "60x80cm",
         medium: "Acrylique",
         src: "/images/village_medieval.jpg",

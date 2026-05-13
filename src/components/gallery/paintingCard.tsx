@@ -8,12 +8,16 @@ type PaintingProps = {
 export default function PaintingCard({ paintingProps }: PaintingProps) {
 
     return (
-        <div className={`w-full aspect-auto`}>
-            <Image
-                src={ paintingProps.src }
-                alt={ paintingProps.alt }
-                fill  
-            />
+        <div 
+            className='relative w-full'
+            style={{aspectRatio: `${paintingProps.imageWidth}/${paintingProps.imageHeight}`}}
+        >
+                <Image
+                    src={ paintingProps.src }
+                    alt={ paintingProps.alt }
+                    fill
+                    className="object-cover"
+                />
         </div>
     );
 }
