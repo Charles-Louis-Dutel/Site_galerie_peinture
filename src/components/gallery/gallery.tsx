@@ -25,13 +25,15 @@ export default function Gallery ({ paintings }: GalleryProps) {
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 
-                            lg:grid-cols-3 grid-flow-row-dense gap-4"
+                            lg:grid-cols-3 gap-4"
                     >
                         {paintings.map((painting) => (
                             <div
                                 key={painting.id} 
-                                className={`relative w-full h-full 
-                                    ${ painting.featured ? "md:col-span-2" : "md:col-span-1" }`}
+                                className={`relative w-full h-full place-content-center 
+                                    ${ painting.featured ? 
+                                        "md:col-span-2 md:row-span-2" : 
+                                        "md:col-span-1 md:row-span-1" }`}
                             >
                                     <PaintingCard paintingProps={painting}/>
                             </div>
