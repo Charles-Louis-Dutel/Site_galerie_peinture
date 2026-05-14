@@ -46,6 +46,7 @@ export default function PatternRenderer({ paintings }: PatternRendererProps) {
     const landscapeFeatured: Paintings[] = extractLandscapeFeatured(paintings);
 
     const patterns = [];
+    const paintingsLeft = [];
     let index: number = 0;
     let indexPortraits: number = 0;
     let indexLandscape: number = 0;
@@ -55,9 +56,10 @@ export default function PatternRenderer({ paintings }: PatternRendererProps) {
 
 
     while (index < allPaintings) {
-        //Pattern A: 1 featured landscape, 2 landscape
+
         if (indexLandscapeFeatured < landscapeFeatured.length && indexLandscape + 1 < landscapePaints.length)
         {
+            //Pattern A: 1 featured landscape, 2 landscapes
             patterns.push(
                 {
                     type: "A",
@@ -70,9 +72,87 @@ export default function PatternRenderer({ paintings }: PatternRendererProps) {
             indexLandscape += 2;
             index += 3;
         }
+        else if (indexPortraitsFeatured < portraitFeatured.length && indexPortraits + 1 < portraitPaints.length)
+        {
+            //Pattern B: 1 featured portrait, 2 portraits
+            patterns.push(
+                {
+                    type: "B",
+                    paintings: [portraitFeatured[indexPortraitsFeatured],
+                                portraitPaints[indexPortraits],
+                                portraitPaints[indexPortraits + 1]],
+                }
+            );
+            indexPortraitsFeatured++;
+            indexPortraits += 2;
+            index += 3;
+        }
+        else if (indexLandscapeFeatured >= landscapeFeatured.length && indexLandscape + 2 < landscapePaints.length)
+        {
+            //Pattern C: 3 landscapes
+            patterns.push(
+                {
+                    type: "C",
+                    paintings: [landscapePaints[indexLandscape],
+                                landscapePaints[indexLandscape + 1],
+                                landscapePaints[indexLandscape + 2]],
+                }
+            );
+            indexLandscape += 3;
+            index += 3;
+        }
+        else if (indexPortraitsFeatured >= portraitFeatured.length && indexPortraits + 2 < portraitPaints.length)
+        {
+            //Pattern D: 3 portraits
+            patterns.push(
+                {
+                    type: "D",
+                    paintings: [portraitPaints[indexPortraits],
+                                portraitPaints[indexPortraits + 1],
+                                portraitPaints[indexPortraits + 2]],
+                }
+            );
+            indexPortraits += 3;
+            index += 3;
+        }
+        else
+        {
+            while (index < allPaintings)
+            {
+                while (indexLandscapeFeatured < landscapeFeatured.length)
+                {
+                    paintingsLeft.push(landscapeFeatured[indexLandscapeFeatured]);
+                    indexLandscapeFeatured++;
+                    index++;
+                }
+                while (indexPortraitsFeatured < portraitFeatured.length)
+                {
+                    paintingsLeft.push(portraitFeatured[indexPortraitsFeatured]);
+                    indexPortraitsFeatured++;
+                    index++;
+                }
+                while (indexLandscape < landscapePaints.length)
+                {
+                    paintingsLeft.push(landscapePaints[indexLandscape]);
+                    indexLandscape++;
+                    index++;
+                }
+                while (indexPortraits < portraitPaints.length)
+                {
+                    paintingsLeft.push(portraitPaints[indexPortraits]);
+                    indexPortraits++;
+                    index++;
+                }
+            }
 
-        //Pattern B: 1 featured portrait, 2 portrait
-
+            //Pattern default
+            patterns.push(
+                {
+                    type: "Default",
+                    paintings: paintingsLeft,
+                }
+            );
+        }
     }
 
     return (
