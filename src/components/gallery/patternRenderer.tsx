@@ -171,56 +171,27 @@ export default function PatternRenderer({ paintings }: PatternRendererProps) {
     return (
         <div>
             {patterns.map((pattern) => {
-                    switch (pattern.type)
-                    {
-                        case "A":
-                            return (<PatternA patternAPaints={pattern.paintings}
-                                                placement={pattern.leftRightPlacement} />);
-                            break;
-                        case "B":
-                            return (<PatternB patternBPaints={pattern.paintings}
-                                                placement={pattern.leftRightPlacement} />);
-                            break;
-                        case "C":
-                            return (<PatternC patternCPaints={pattern.paintings} />);
-                            break;
-                        case "D":
-                            return (<PatternD patternDPaints={pattern.paintings} />);
-                            break;
-                        default:
-                            return (<PatternDefault patternDefPaints={pattern.paintings} />);
-                    }
+                
+                switch (pattern.type)
+                {
+                    case "A":
+                        return (<PatternA patternAPaints={pattern.paintings}
+                                            placement={pattern.leftRightPlacement} />);
+                        break;
+                    case "B":
+                        return (<PatternB patternBPaints={pattern.paintings}
+                                            placement={pattern.leftRightPlacement} />);
+                        break;
+                    case "C":
+                        return (<PatternC patternCPaints={pattern.paintings} />);
+                        break;
+                    case "D":
+                        return (<PatternD patternDPaints={pattern.paintings} />);
+                        break;
+                    default:
+                        return (<PatternDefault patternDefPaints={pattern.paintings} />);
+                }
             })}
         </div>
     )
 }
-
-
-{/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 
-        gap-4 grid-flow-dense"
->
-    {landscapePaints.map((painting) => (
-        <div
-            key={painting.id} 
-            className={`relative overflow-hidden
-                ${ painting.featured ? 
-                    "md:col-span-2 md:row-span-2" : 
-                    "md:col-span-1 md:row-span-1" }`}
-        >
-                <PaintingCard paintingProps={painting}/>
-        </div>
-    ))}
-
-    {portraitPaints.map((painting) => (
-        <div
-            key={painting.id} 
-            className={`relative overflow-hidden
-                ${ painting.featured ? 
-                    "md:col-span-2 md:row-span-2" : 
-                    "md:col-span-1 md:row-span-1" }`}
-        >
-                <PaintingCard paintingProps={painting}/>
-        </div>
-    ))}
-
-</div> */}
