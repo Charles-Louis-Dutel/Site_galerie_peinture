@@ -1,29 +1,12 @@
 import { Paintings } from "@/src/lib/painting"
-import PaintingCard from "@/src/components/gallery/paintingCard";
+import PatternRenderer from "@/src/components/gallery/patternRenderer";
 
 type GalleryProps = {
     paintings: Paintings[];
 }
 
 
-function extractPortraitPainting({ paintings }: GalleryProps) {
-    const portraitPaints: Paintings[] = paintings.filter((painting) => painting.orientation === "portrait");
-
-    return (portraitPaints);
-}
-
-
-function extractLandscapePainting({ paintings }: GalleryProps) {
-    const landscapePaints = paintings.filter((painting) => painting.orientation === "landscape");
-
-    return (landscapePaints);
-}
-
-
 export default function Gallery ({ paintings }: GalleryProps) {
-
-    const portraitPaints: Paintings[] = extractPortraitPainting({ paintings });
-    const landscapePaints = extractLandscapePainting({ paintings });
 
     return (
         <section>
@@ -42,22 +25,10 @@ export default function Gallery ({ paintings }: GalleryProps) {
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 
-                            gap-4 grid-flow-dense"
-                    >
-                        {portraitPaints.map((painting) => (
-                            <div
-                                key={painting.id} 
-                                className={`relative overflow-hidden
-                                    ${ painting.featured ? 
-                                        "md:col-span-2 md:row-span-2" : 
-                                        "md:col-span-1 md:row-span-1" }`}
-                            >
-                                    <PaintingCard paintingProps={painting}/>
-                            </div>
-                        ))}
-                    </div>
+                    
                 </div>
+
+                <PatternRenderer paintings={paintings} />
             </div>
         </section>
     );

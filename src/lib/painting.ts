@@ -95,7 +95,7 @@ export const paintings = [
         medium: "Acrylique",
         src: "/images/eglise.jpg",
         alt: "Peinture de paysage",
-        orientation: "landscape",
+        orientation: "portrait",
         featured: true
     },
     {
@@ -127,7 +127,7 @@ export const paintings = [
         medium: "Acrylique",
         src: "/images/rive_sous_arbres.jpg",
         alt: "Peinture de paysage",
-        orientation: "landscape",
+        orientation: "portrait",
         featured: false
     },
     {
@@ -143,7 +143,7 @@ export const paintings = [
         medium: "Acrylique",
         src: "/images/riviere.jpg",
         alt: "Peinture de paysage",
-        orientation: "landscape",
+        orientation: "portrait",
         featured: false
     },
     {
@@ -159,7 +159,7 @@ export const paintings = [
         medium: "Acrylique",
         src: "/images/village_medieval.jpg",
         alt: "Peinture de paysage",
-        orientation: "landscape",
+        orientation: "portrait",
         featured: false
     },
 ]
