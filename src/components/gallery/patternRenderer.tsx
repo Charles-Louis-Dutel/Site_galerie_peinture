@@ -170,26 +170,32 @@ export default function PatternRenderer({ paintings }: PatternRendererProps) {
 
     return (
         <div>
-            {patterns.map((pattern) => {
+            {patterns.map((pattern, index) => {
                 
                 switch (pattern.type)
                 {
                     case "A":
-                        return (<PatternA patternAPaints={pattern.paintings}
-                                            placement={pattern.leftRightPlacement} />);
-                        break;
+                        return (<PatternA 
+                                    key={`pattern-a-${index}`}
+                                    patternAPaints={pattern.paintings}
+                                    placement={pattern.leftRightPlacement} />);
                     case "B":
-                        return (<PatternB patternBPaints={pattern.paintings}
-                                            placement={pattern.leftRightPlacement} />);
-                        break;
+                        return (<PatternB
+                                    key={`pattern-b-${index}`}
+                                    patternBPaints={pattern.paintings}
+                                    placement={pattern.leftRightPlacement} />);
                     case "C":
-                        return (<PatternC patternCPaints={pattern.paintings} />);
-                        break;
+                        return (<PatternC 
+                                    key={`pattern-c-${index}`}
+                                    patternCPaints={pattern.paintings} />);
                     case "D":
-                        return (<PatternD patternDPaints={pattern.paintings} />);
-                        break;
+                        return (<PatternD 
+                                    key={`pattern-d-${index}`}
+                                    patternDPaints={pattern.paintings} />);
                     default:
-                        return (<PatternDefault patternDefPaints={pattern.paintings} />);
+                        return (<PatternDefault
+                                    key={`pattern-default-${index}`}
+                                    patternDefPaints={pattern.paintings} />);
                 }
             })}
         </div>

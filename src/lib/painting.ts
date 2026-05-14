@@ -96,7 +96,7 @@ export const paintings = [
         src: "/images/eglise.jpg",
         alt: "Peinture de paysage",
         orientation: "portrait",
-        featured: true
+        featured: false
     },
     {
         id: "painting_006",
@@ -160,6 +160,6 @@ export const paintings = [
         src: "/images/village_medieval.jpg",
         alt: "Peinture de paysage",
         orientation: "portrait",
-        featured: false
+        featured: true
     },
 ]

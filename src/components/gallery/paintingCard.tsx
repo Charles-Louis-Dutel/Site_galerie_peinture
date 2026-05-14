@@ -16,7 +16,7 @@ export default function PaintingCard({ paintingProps }: PaintingProps) {
                     src={ paintingProps.src }
                     alt={ paintingProps.alt }
                     fill
-                    className="object-contain"
+                    className="object-cover"
                 />
         </div>
     );
