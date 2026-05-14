@@ -1,5 +1,10 @@
-import { Paintings } from "@/src/lib/painting"
-import PaintingCard from "@/src/components/gallery/paintingCard";
+import { Paintings } from "@/src/lib/painting";
+import PatternA from "@/src/components/gallery/patternA";
+import PatternB from "@/src/components/gallery/patternB";
+import PatternC from "@/src/components/gallery/patternC";
+import PatternD from "@/src/components/gallery/patternD";
+import PatternDefault from "@/src/components/gallery/patternDefault";
+
 
 type PatternRendererProps = {
     paintings: Paintings[];
@@ -48,6 +53,7 @@ export default function PatternRenderer({ paintings }: PatternRendererProps) {
     const patterns = [];
     const paintingsLeft = [];
     let index: number = 0;
+    let leftRightPlacement: number = 0;
     let indexPortraits: number = 0;
     let indexLandscape: number = 0;
     let indexPortraitsFeatured: number = 0;
@@ -65,9 +71,11 @@ export default function PatternRenderer({ paintings }: PatternRendererProps) {
                     type: "A",
                     paintings: [landscapeFeatured[indexLandscapeFeatured],
                                 landscapePaints[indexLandscape],
-                                landscapePaints[indexLandscape + 1]], 
+                                landscapePaints[indexLandscape + 1]],
+                    leftRightPlacement, 
                 }
             );
+            leftRightPlacement++;
             indexLandscapeFeatured++;
             indexLandscape += 2;
             index += 3;
@@ -81,8 +89,10 @@ export default function PatternRenderer({ paintings }: PatternRendererProps) {
                     paintings: [portraitFeatured[indexPortraitsFeatured],
                                 portraitPaints[indexPortraits],
                                 portraitPaints[indexPortraits + 1]],
+                    leftRightPlacement,
                 }
             );
+            leftRightPlacement++;
             indexPortraitsFeatured++;
             indexPortraits += 2;
             index += 3;
@@ -96,6 +106,7 @@ export default function PatternRenderer({ paintings }: PatternRendererProps) {
                     paintings: [landscapePaints[indexLandscape],
                                 landscapePaints[indexLandscape + 1],
                                 landscapePaints[indexLandscape + 2]],
+                    leftRightPlacement: 0,
                 }
             );
             indexLandscape += 3;
@@ -110,6 +121,7 @@ export default function PatternRenderer({ paintings }: PatternRendererProps) {
                     paintings: [portraitPaints[indexPortraits],
                                 portraitPaints[indexPortraits + 1],
                                 portraitPaints[indexPortraits + 2]],
+                    leftRightPlacement: 0,
                 }
             );
             indexPortraits += 3;
@@ -150,14 +162,36 @@ export default function PatternRenderer({ paintings }: PatternRendererProps) {
                 {
                     type: "Default",
                     paintings: paintingsLeft,
+                    leftRightPlacement: 0,
                 }
             );
         }
     }
 
     return (
-        <>
-        </>
+        <div>
+            {patterns.map((pattern) => {
+                    switch (pattern.type)
+                    {
+                        case "A":
+                            return (<PatternA patternAPaints={pattern.paintings}
+                                                placement={pattern.leftRightPlacement} />);
+                            break;
+                        case "B":
+                            return (<PatternB patternBPaints={pattern.paintings}
+                                                placement={pattern.leftRightPlacement} />);
+                            break;
+                        case "C":
+                            return (<PatternC patternCPaints={pattern.paintings} />);
+                            break;
+                        case "D":
+                            return (<PatternD patternDPaints={pattern.paintings} />);
+                            break;
+                        default:
+                            return (<PatternDefault patternDefPaints={pattern.paintings} />);
+                    }
+            })}
+        </div>
     )
 }
 
