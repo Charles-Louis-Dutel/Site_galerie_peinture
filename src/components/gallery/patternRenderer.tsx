@@ -6,6 +6,7 @@ import PatternDefault from "@/src/components/gallery/patternDefault";
 
 type PatternRendererProps = {
     paintings: Paintings[];
+    onPaintingClick: (painting: Paintings) => void;
 }
 
 
@@ -57,7 +58,7 @@ function extractSquareFeatured(paintings: Paintings[]) : Paintings[] {
 }
 
 
-export default function PatternRenderer({ paintings }: PatternRendererProps) {
+export default function PatternRenderer({ paintings, onPaintingClick }: PatternRendererProps) {
 
     const portraitPaints: Paintings[] = extractPortraitPainting(paintings);
     const landscapePaints: Paintings[] = extractLandscapePainting(paintings);
@@ -259,33 +260,40 @@ export default function PatternRenderer({ paintings }: PatternRendererProps) {
                         return (<PatternA 
                                     key={`pattern-a-${index}`}
                                     patternAPaints={pattern.paintings}
-                                    placement={pattern.leftRightPlacement} />);
+                                    placement={pattern.leftRightPlacement}
+                                    onPaintingClick={onPaintingClick} />);
                     case "B":
                         return (<PatternB
                                     key={`pattern-b-${index}`}
                                     patternBPaints={pattern.paintings}
-                                    placement={pattern.leftRightPlacement} />);
+                                    placement={pattern.leftRightPlacement}
+                                    onPaintingClick={onPaintingClick} />);
                     case "C":
                         return (<PatternDefault 
                                     key={`pattern-c-${index}`}
-                                    patternDefPaints={pattern.paintings} />);
+                                    patternDefPaints={pattern.paintings}
+                                    onPaintingClick={onPaintingClick} />);
                     case "D":
                         return (<PatternDefault 
                                     key={`pattern-d-${index}`}
-                                    patternDefPaints={pattern.paintings} />);
+                                    patternDefPaints={pattern.paintings}
+                                    onPaintingClick={onPaintingClick} />);
                     case "S":
                         return (<PatternB
                                     key={`pattern-S-${index}`}
                                     patternBPaints={pattern.paintings}
-                                    placement={pattern.leftRightPlacement} />);
+                                    placement={pattern.leftRightPlacement}
+                                    onPaintingClick={onPaintingClick} />);
                     case "s":
                         return (<PatternDefault 
                                     key={`pattern-s-${index}`}
-                                    patternDefPaints={pattern.paintings} />);
+                                    patternDefPaints={pattern.paintings}
+                                    onPaintingClick={onPaintingClick} />);
                     default:
                         return (<PatternDefault
                                     key={`pattern-default-${index}`}
-                                    patternDefPaints={pattern.paintings} />);
+                                    patternDefPaints={pattern.paintings}
+                                    onPaintingClick={onPaintingClick} />);
                 }
             })}
         </div>

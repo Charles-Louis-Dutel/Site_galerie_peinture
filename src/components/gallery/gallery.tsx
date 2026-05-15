@@ -1,5 +1,9 @@
+"use client"
+
 import { Paintings } from "@/src/lib/painting"
 import PatternRenderer from "@/src/components/gallery/patternRenderer";
+import PaintingLightBox from "@/src/components/gallery/paintingLightBox";
+import { useState } from "react";
 
 type GalleryProps = {
     paintings: Paintings[];
@@ -7,6 +11,16 @@ type GalleryProps = {
 
 
 export default function Gallery ({ paintings }: GalleryProps) {
+
+    const [selectedPainting, setSelectedPainting] = useState<Paintings | null>(null);
+
+    function onPaintingClick(painting: Paintings) {
+        setSelectedPainting(painting);
+    }
+
+    function onClose() {
+        setSelectedPainting(null);
+    }
 
     return (
         <section>
@@ -25,7 +39,14 @@ export default function Gallery ({ paintings }: GalleryProps) {
                         </p>
                     </div>
 
-                    <PatternRenderer paintings={paintings} />
+                    <PatternRenderer paintings={paintings} onPaintingClick={onPaintingClick}/>
+
+                    <div>
+                        {selectedPainting
+                            ? <PaintingLightBox painting={selectedPainting} onClose={onClose}/>
+                            : <></>
+                        }
+                    </div>
                 </div>
             </div>
         </section>
