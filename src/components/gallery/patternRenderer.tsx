@@ -76,10 +76,13 @@ export default function PatternRenderer({ paintings }: PatternRendererProps) {
     let indexPortraitsFeatured: number = 0;
     let indexLandscapeFeatured: number = 0;
     let indexSquareFeatured: number = 0;
+    let patternCreated: boolean = false;
     const allPaintings: number = portraitPaints.length + landscapePaints.length + portraitFeatured.length + landscapeFeatured.length + squarePaints.length + squareFeatured.length;
 
 
-    while (index < allPaintings) {
+    while (index < allPaintings)
+    {
+        patternCreated = false
 
         if (indexLandscapeFeatured < landscapeFeatured.length && indexLandscape + 1 < landscapePaints.length)
         {
@@ -97,8 +100,9 @@ export default function PatternRenderer({ paintings }: PatternRendererProps) {
             indexLandscapeFeatured++;
             indexLandscape += 2;
             index += 3;
+            patternCreated = true;
         }
-        else if (indexPortraitsFeatured < portraitFeatured.length && indexPortraits + 1 < portraitPaints.length)
+        if (indexPortraitsFeatured < portraitFeatured.length && indexPortraits + 1 < portraitPaints.length)
         {
             //Pattern B: 1 featured portrait, 2 portraits
             patterns.push(
@@ -114,8 +118,9 @@ export default function PatternRenderer({ paintings }: PatternRendererProps) {
             indexPortraitsFeatured++;
             indexPortraits += 2;
             index += 3;
+            patternCreated = true;
         }
-        else if (indexSquareFeatured < squareFeatured.length && indexSquare + 1 < squarePaints.length)
+        if (indexSquareFeatured < squareFeatured.length && indexSquare + 1 < squarePaints.length)
         {
             //Patern S: 1 featured square, 2 squares
             patterns.push(
@@ -131,8 +136,34 @@ export default function PatternRenderer({ paintings }: PatternRendererProps) {
             indexSquareFeatured++;
             indexSquare += 2;
             index += 3;
+            patternCreated = true;
         }
-        else if (indexLandscapeFeatured >= landscapeFeatured.length && indexLandscape + 2 < landscapePaints.length)
+        if (patternCreated === false)
+        {
+            while (indexLandscapeFeatured < landscapeFeatured.length)
+            {
+                landscapePaints.push(landscapeFeatured[indexLandscapeFeatured]);
+                indexLandscapeFeatured++;
+            }
+            while (indexPortraitsFeatured < portraitFeatured.length)
+            {
+                portraitPaints.push(portraitFeatured[indexPortraitsFeatured]);
+                indexPortraitsFeatured++;
+            }
+            while (indexSquareFeatured < squareFeatured.length)
+            {
+                squarePaints.push(squareFeatured[indexSquareFeatured]);
+                indexSquareFeatured++;
+            }
+            break;
+        }
+    }
+
+    while (index < allPaintings)
+    {
+        patternCreated = false;
+
+        if (indexLandscape + 2 < landscapePaints.length)
         {
             //Pattern C: 3 landscapes
             patterns.push(
@@ -146,8 +177,9 @@ export default function PatternRenderer({ paintings }: PatternRendererProps) {
             );
             indexLandscape += 3;
             index += 3;
+            patternCreated = true;
         }
-        else if (indexPortraitsFeatured >= portraitFeatured.length && indexPortraits + 2 < portraitPaints.length)
+        if (indexPortraits + 2 < portraitPaints.length)
         {
             //Pattern D: 3 portraits
             patterns.push(
@@ -161,8 +193,9 @@ export default function PatternRenderer({ paintings }: PatternRendererProps) {
             );
             indexPortraits += 3;
             index += 3;
+            patternCreated = true;
         }
-        else if (indexSquareFeatured >= squareFeatured.length && indexSquare + 2 < squarePaints.length)
+        if (indexSquare + 2 < squarePaints.length)
         {
             //Pattern s: 3 squares
             patterns.push(
@@ -176,58 +209,44 @@ export default function PatternRenderer({ paintings }: PatternRendererProps) {
             );
             indexSquare += 3;
             index += 3;
+            patternCreated = true;
         }
-        else
-        {
-            while (index < allPaintings)
-            {
-                while (indexLandscapeFeatured < landscapeFeatured.length)
-                {
-                    paintingsLeft.push(landscapeFeatured[indexLandscapeFeatured]);
-                    indexLandscapeFeatured++;
-                    index++;
-                }
-                while (indexPortraitsFeatured < portraitFeatured.length)
-                {
-                    paintingsLeft.push(portraitFeatured[indexPortraitsFeatured]);
-                    indexPortraitsFeatured++;
-                    index++;
-                }
-                while (indexSquareFeatured < squareFeatured.length)
-                {
-                    paintingsLeft.push(squareFeatured[indexSquareFeatured]);
-                    indexSquareFeatured++;
-                    index++;
-                }
-                while (indexLandscape < landscapePaints.length)
-                {
-                    paintingsLeft.push(landscapePaints[indexLandscape]);
-                    indexLandscape++;
-                    index++;
-                }
-                while (indexPortraits < portraitPaints.length)
-                {
-                    paintingsLeft.push(portraitPaints[indexPortraits]);
-                    indexPortraits++;
-                    index++;
-                }
-                while (indexSquare < squarePaints.length)
-                {
-                    paintingsLeft.push(squarePaints[indexSquare]);
-                    indexSquare++;
-                    index++;
-                }
-            }
+        if (patternCreated === false)
+            break;
+    }
 
-            //Pattern default
-            patterns.push(
-                {
-                    type: "Default",
-                    paintings: paintingsLeft,
-                    leftRightPlacement: 0,
-                }
-            );
+    while (index < allPaintings)
+    {
+        while (indexLandscape < landscapePaints.length)
+        {
+            paintingsLeft.push(landscapePaints[indexLandscape]);
+            indexLandscape++;
+            index++;
         }
+        while (indexPortraits < portraitPaints.length)
+        {
+            paintingsLeft.push(portraitPaints[indexPortraits]);
+            indexPortraits++;
+            index++;
+        }
+        while (indexSquare < squarePaints.length)
+        {
+            paintingsLeft.push(squarePaints[indexSquare]);
+            indexSquare++;
+            index++;
+        }
+    }
+
+    //Pattern default
+    if (paintingsLeft.length > 0)
+    {
+        patterns.push(
+            {
+                type: "Default",
+                paintings: paintingsLeft,
+                leftRightPlacement: 0,
+            }
+        );
     }
 
     return (
