@@ -21,9 +21,11 @@ export default function PaintingLightBox({ painting, onClose }: PaintingLightBox
         };
 
         window.addEventListener('keydown', handleKeyDown);
+        document.body.style.overflow = "hidden";
 
         return (() => {
             window.removeEventListener('keydown', handleKeyDown);
+            document.body.style.overflow = "auto";
         });
     }, [onClose]);
 
@@ -31,7 +33,8 @@ export default function PaintingLightBox({ painting, onClose }: PaintingLightBox
         <div className="relative">
             <div 
                 className="fixed inset-0 z-50 top-0 left-0 w-full h-full bg-black/70
-                    flex justify-center p-10 animate-[fadeIn_250ms_ease-out]"
+                    flex flex-col justify-center items-center p-10 
+                    animate-[fadeIn_250ms_ease-out]"
                 onClick={() => onClose()}
             >
                 <div 
@@ -39,7 +42,7 @@ export default function PaintingLightBox({ painting, onClose }: PaintingLightBox
                     onClick={() => onClose()}
                 >
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" 
-                        stroke-width="1.5" stroke="currentColor" 
+                        strokeWidth="1.5" stroke="currentColor" 
                         className="size-6">
         
                         <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
@@ -47,7 +50,8 @@ export default function PaintingLightBox({ painting, onClose }: PaintingLightBox
                 </div>
 
 
-                <div className="relative max-h-[80vh] max-w-[80vw] animate-[imageReveal_320ms_ease-out]"
+                <div className="relative w-full max-h-[90vh] sm:max-h-[80vh] max-w-[90vw]
+                        sm:max-w-[80vw] animate-[imageReveal_320ms_ease-out]"
                     style={{aspectRatio: `${painting.imageWidth}/${painting.imageHeight}`}}
                     onClick={(event) => event.stopPropagation()}
                 >
@@ -57,6 +61,17 @@ export default function PaintingLightBox({ painting, onClose }: PaintingLightBox
                         fill
                         className="object-contain"
                     />
+                </div>
+
+                <div className="flex w-full p-6 justify-center">
+                    <div className="mx-auto text-white text-center">
+                        <h2 className="text-lg font-semibold">
+                            {painting.title}
+                        </h2>
+                        <p>
+                            {`${painting.width}X${painting.height}cm - ${painting.medium}`}
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
