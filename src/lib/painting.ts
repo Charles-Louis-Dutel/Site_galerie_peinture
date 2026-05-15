@@ -32,7 +32,7 @@ export const paintings = [
         src: "/images/bord_de_lac.jpg",
         alt: "Peinture de paysage",
         orientation: "landscape",
-        featured: true
+        featured: false
     },
     {
         id: "painting_002",
@@ -79,8 +79,8 @@ export const paintings = [
         medium: "Huile sur toile",
         src: "/images/coquelicots.jpg",
         alt: "Peinture de paysage",
-        orientation: "landscape",
-        featured: false
+        orientation: "square",
+        featured: true
     },
     {
         id: "painting_005",

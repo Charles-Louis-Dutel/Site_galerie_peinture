@@ -9,7 +9,6 @@ export default function PaintingCard({ paintingProps }: PaintingProps) {
 
     return (
         <div 
-            className=''
             style={{aspectRatio: `${paintingProps.imageWidth}/${paintingProps.imageHeight}`}}
         >
                 <Image

@@ -18,17 +18,15 @@ export default function Gallery ({ paintings }: GalleryProps) {
                         </h1>
 
                         <p className="text-lg md:text-xl">
-                            Des peintures à  l’acrylique inspirées par
+                            Des peintures à l'huile et à l’acrylique inspirées par
                             la lumière,  
                             <br className="hidden sm:block"/>
                             {" "}les couleurs et les paysages naturels.
                         </p>
                     </div>
 
-                    
+                    <PatternRenderer paintings={paintings} />
                 </div>
-
-                <PatternRenderer paintings={paintings} />
             </div>
         </section>
     );
