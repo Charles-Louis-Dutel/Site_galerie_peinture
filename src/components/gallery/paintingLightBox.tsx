@@ -33,7 +33,7 @@ export default function PaintingLightBox({ painting, onClose }: PaintingLightBox
         <div className="relative">
             <div 
                 className="fixed inset-0 z-50 top-0 left-0 w-full h-full bg-black/70
-                    flex flex-col justify-center items-center p-10 
+                    flex flex-col justify-center items-center p-2 md:p-10 
                     animate-[fadeIn_250ms_ease-out]"
                 onClick={() => onClose()}
             >
@@ -50,8 +50,8 @@ export default function PaintingLightBox({ painting, onClose }: PaintingLightBox
                 </div>
 
 
-                <div className="relative w-full max-h-[90vh] sm:max-h-[80vh] max-w-[90vw]
-                        sm:max-w-[80vw] animate-[imageReveal_320ms_ease-out]"
+                <div className="relative w-full max-h-[65dvh] md:max-h-[80dvh] max-w-[90dvw]
+                        animate-[imageReveal_320ms_ease-out]"
                     style={{aspectRatio: `${painting.imageWidth}/${painting.imageHeight}`}}
                     onClick={(event) => event.stopPropagation()}
                 >
@@ -63,14 +63,17 @@ export default function PaintingLightBox({ painting, onClose }: PaintingLightBox
                     />
                 </div>
 
-                <div className="flex w-full p-6 justify-center">
+                <div className="flex w-full p-2 md:p-6 justify-center">
                     <div className="mx-auto text-white text-center">
                         <h2 className="text-lg font-semibold">
                             {painting.title}
                         </h2>
-                        <p>
+                        <p className="pb-2">
                             {`${painting.width}X${painting.height}cm - ${painting.medium}`}
                         </p>
+                        <button className="rounded-4xl border p-2 hover:bg-white hover">
+                            Voir l’œuvre
+                        </button>
                     </div>
                 </div>
             </div>
