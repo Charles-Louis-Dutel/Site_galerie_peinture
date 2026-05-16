@@ -72,7 +72,8 @@ export default function PaintingLightBox({ painting, onClose }: PaintingLightBox
                         <p className="pb-2">
                             {`${painting.width}X${painting.height}cm - ${painting.medium}`}
                         </p>
-                        <button 
+                        <button
+                            type="button" 
                             className="rounded-4xl border p-2 hover:bg-white hover:text-black"
                             onClick={(event) => event.stopPropagation()}
                         >
