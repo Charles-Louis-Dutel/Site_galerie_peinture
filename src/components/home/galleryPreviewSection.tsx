@@ -86,7 +86,7 @@ export default function GalleryPreviewSection() {
                             href="/gallery"
                             className="border border-gray-300 rounded-full px-6 py-3
                                     font-serif transition-colors duration-300
-                                    hover:bg-gray-500 hover:text-gray-50">
+                                    hover:bg-gray-400 hover:text-gray-50">
                                 Decouvrir la galerie
                         </Link>
                     </div>
