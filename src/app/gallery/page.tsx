@@ -8,11 +8,3 @@ export default function GalleryPage() {
         </>
     );
 }
-
-{/* <ul>
-    {paintings.map((painting) => (
-        <li key={painting.slug}>
-            <Link href={`/gallery/${painting.slug}`}>{painting.title}</Link>
-        </li>
-    ))}
-</ul> */}
