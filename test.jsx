@@ -1,12 +1,10 @@
-<!DOCTYPE html>
-
-<html class="light" lang="fr"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!DOCTYPE html><html class="light" lang="fr"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Manrope:wght@400;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@400;600&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
       tailwind.config = {
         darkMode: "class",
@@ -74,12 +72,14 @@
                     "margin-edge": "4rem"
             },
             "fontFamily": {
-                    "body-lg": ["manrope"],
-                    "body-md": ["manrope"],
-                    "headline-display": ["notoSerif"],
-                    "headline-md": ["notoSerif"],
-                    "label-sm": ["manrope"],
-                    "headline-lg": ["notoSerif"]
+                    "body-lg": ["Manrope"],
+                    "body-md": ["Manrope"],
+                    "headline-display": ["Noto Serif"],
+                    "headline-md": ["Noto Serif"],
+                    "label-sm": ["Manrope"],
+                    "headline-lg": ["Noto Serif"],
+                    "notoSerif": ["Noto Serif"],
+                    "manrope": ["Manrope"]
             },
             "fontSize": {
                     "body-lg": ["1.125rem", {"lineHeight": "1.7", "fontWeight": "400"}],
@@ -94,111 +94,130 @@
       }
     </script>
 <style>
-        .font-notoSerif { font-family: 'Noto Serif', serif; }
-        .font-manrope { font-family: 'Manrope', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #f9f9f9;
+        }
     </style>
 </head>
-<body class="bg-surface text-on-surface selection:bg-primary-fixed-dim selection:text-primary">
+<body class="font-body-md text-on-surface selection:bg-primary-fixed-dim selection:text-primary">
 <!-- TopNavBar -->
-<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-edge py-6 bg-surface/90 dark:bg-surface-dim/90 backdrop-blur-sm border-b border-outline-variant/30">
-<div class="font-headline-md text-headline-md tracking-widest text-primary dark:text-primary-fixed uppercase font-notoSerif">ÉLÉONORE DUBOIS</div>
-<nav class="hidden md:flex gap-12">
-<a class="font-label-sm text-label-sm tracking-widest text-on-surface-variant dark:text-on-tertiary-container hover:text-primary dark:hover:text-primary-fixed transition-colors" href="#">GALERIE</a>
-<a class="font-label-sm text-label-sm tracking-widest text-primary dark:text-primary-fixed border-b border-primary dark:border-primary-fixed pb-1" href="#">À PROPOS</a>
-<a class="font-label-sm text-label-sm tracking-widest text-on-surface-variant dark:text-on-tertiary-container hover:text-primary dark:hover:text-primary-fixed transition-colors" href="#">CONTACT</a>
-</nav>
+<nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-edge py-6 bg-surface/90 backdrop-blur-sm border-b border-outline-variant/30">
+<div class="font-headline-md text-headline-md tracking-widest text-primary font-notoSerif uppercase">
+            ÉLÉONORE DUBOIS
+        </div>
+<div class="hidden md:flex gap-12">
+<a class="font-label-sm text-label-sm tracking-widest text-on-surface-variant hover:text-primary transition-colors cursor-pointer uppercase" href="#">GALERIE</a>
+<a class="font-label-sm text-label-sm tracking-widest text-on-surface-variant hover:text-primary transition-colors cursor-pointer uppercase" href="#">À PROPOS</a>
+<a class="font-label-sm text-label-sm tracking-widest text-primary border-b border-primary pb-1 cursor-pointer uppercase" href="#">CONTACT</a>
+</div>
 <div class="flex items-center gap-6">
-<span class="material-symbols-outlined text-primary dark:text-primary-fixed cursor-pointer hover:opacity-70 transition-opacity duration-300" data-icon="shopping_bag">shopping_bag</span>
-<span class="material-symbols-outlined md:hidden text-primary" data-icon="menu">menu</span>
+<span class="material-symbols-outlined text-primary cursor-pointer transition-opacity duration-300 hover:opacity-70" data-icon="shopping_bag">shopping_bag</span>
+<span class="md:hidden material-symbols-outlined text-primary cursor-pointer" data-icon="menu">menu</span>
 </div>
+</nav>
+<main class="pt-32 pb-section-gap px-margin-edge max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-grid-gutter">
+<!-- Left Column: Context & Imagery -->
+<div class="md:col-span-5 flex flex-col justify-center">
+<header class="mb-12">
+<h1 class="font-headline-display text-headline-display text-primary mb-6">Contact</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-md">
+                        Partagez vos impressions sur mes dernières peintures naturelles ou posez vos questions sur les expositions à venir. Je serais ravie de vous lire et de vous répondre.
+                    </p>
 </header>
-<main class="pt-32 pb-20">
-<!-- Hero Section -->
-<section class="max-w-container-max mx-auto px-margin-edge mb-section-gap">
-<div class="flex flex-col md:flex-row items-center gap-16">
-<div class="w-full md:w-1/2 space-y-8">
-<span class="font-label-sm text-label-sm text-outline tracking-[0.2em] uppercase">L'âme derrière le pinceau</span>
-<h1 class="font-headline-display text-headline-display text-primary leading-tight">Capturer le silence des paysages.</h1>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
-                        Depuis mon plus jeune âge, les collines du Luberon et les forêts d'Émeraude ont été mon refuge. Peindre n'est pas pour moi une profession, mais une nécessité vitale de dialogue avec la nature sauvage.
-                    </p>
+<div class="aspect-[4/5] w-full overflow-hidden mb-8">
+<img alt="High-quality editorial photography of professional artist's tools." class="w-full h-full object-cover transition-transform duration-1000 hover:scale-105" data-alt="A serene and minimalist artist studio scene, featuring a clean wooden table with natural pigments, brushes, and a linen canvas. The lighting is soft and diffused, coming from a large side window, creating a calm and contemplative atmosphere. The color palette is composed of organic earth tones, soft beiges, and deep charcoal shadows, perfectly reflecting an editorial fine art aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZZqLcw-84hqpPaQRShRVGz04pQ2cuMSkoKUpSpr3xD7UQiSi9wZ4Oz5mMwYkSpbusYzvIQGpf4TA7Jib4-8r4hJtCdqyw3T_mS3u05_qInS6-qB3E4XvnahBf-8U5yTa07ra9_DgYWFDLU253OfFovXtHnsshNYQoz5oKOFQ7R9i_Izfv0MZxrrolKFemPzt9lyroWAtd5SZNKcGkc8yp1ioJr1vLlutuzOadhXpmUZ9-I-5Ia6VlgYUiQ4SPoS8s9SiptQ-twZ4">
 </div>
-<div class="w-full md:w-1/2">
-<div class="relative overflow-hidden aspect-[4/5] bg-surface-container-high">
-<img alt="Éléonore Dubois" class="w-full h-full object-cover grayscale-[20%] hover:scale-105 transition-transform duration-1000" data-alt="A serene, cinematic portrait of a female artist in her late thirties with soft features, standing in her sunlit studio. She is dressed in a simple linen apron stained with natural pigments, looking thoughtfully at a large landscape canvas. The lighting is soft and golden, coming from a large north-facing window, creating a high-end editorial aesthetic in a light-mode color palette of creams and soft greys." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPrnU3xsue97my57ojgdJSNVNeRem1psupc4Pcbdixc2Xh6oaZCrYfIh_lx8mmbwWra7jvHy_auKd5LKcFEIptDFWs6bo1xQTlpGj_7_hWppTUc0cDcEFj7VEFzTlBqa0tH4hsutG-XFkUNsNIGEd8n0e9Yjc111Jb_WFyd3FDmCUuDLBO2cki1J_gpRGdo-ckvPHde4Gg1ubTSecN7uSuBmi3UhVwE0bLwUyXE6-EIqhUZw54cydhjLf0vVss-znecyGGjBK4sOE"/>
+<div class="flex flex-col gap-4 font-label-sm text-label-sm tracking-widest uppercase text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="location_on">location_on</span>
+<span class="">Atelier — Lyon, France</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="mail">mail</span>
+<span class="">contact@eleonoredubois.art</span>
 </div>
 </div>
 </div>
-</section>
-<!-- Process Creative - Bento Grid Style -->
-<section class="max-w-container-max mx-auto px-margin-edge mb-section-gap">
-<div class="grid grid-cols-1 md:grid-cols-12 gap-grid-gutter auto-rows-[300px]">
-<!-- Text Block 1 -->
-<div class="md:col-span-4 md:row-span-2 flex flex-col justify-center p-12 bg-surface-container-low border border-outline-variant/20">
-<h2 class="font-headline-lg text-headline-lg text-primary mb-6">Le Plein Air</h2>
-<p class="font-body-md text-body-md text-on-surface-variant">
-                        Mon processus commence toujours loin de l'atelier. Je m'immerge dans le paysage pendant des heures avant de poser la première touche. C'est le vent, l'humidité de l'air et le mouvement des ombres qui dictent ma palette.
-                    </p>
+
+<!-- Right Column: Form -->
+<div class="md:col-span-6 md:col-start-7 flex flex-col justify-center">
+        <div class="bg-surface-container-low p-8 md:p-12">
+                <form class="flex flex-col gap-10">
+                        <div class="relative">
+                                <input 
+                                    class="w-full bg-transparent border-t-0 border-x-0 border-b
+                                    border-outline-variant/50 focus:border-primary focus:ring-0
+                                    px-0 py-3 font-body-md text-on-surface
+                                    placeholder:text-on-tertiary-container transition-all"
+                                    id="name"
+                                    name="name"
+                                    placeholder="Nom"
+                                    required=""
+                                    type="text"
+                                />
+                        </div>
+
+                        <div class="relative">
+                                <input class="w-full bg-transparent border-t-0 border-x-0 border-b border-outline-variant/50 focus:border-primary focus:ring-0 px-0 py-3 font-body-md text-on-surface placeholder:text-on-tertiary-container transition-all" id="email" name="email" placeholder="Email" required="" type="email">
+                        </div>
+
+                        <div class="relative">
+                                <input class="w-full bg-transparent border-t-0 border-x-0 border-b border-outline-variant/50 focus:border-primary focus:ring-0 px-0 py-3 font-body-md text-on-surface placeholder:text-on-tertiary-container transition-all" id="subject" name="subject" placeholder="Objet" type="text">
+                        </div>
+
+                        <div class="relative">
+                                <textarea
+                                    class="w-full bg-transparent border-t-0 border-x-0 border-b
+                                        border-outline-variant/50 focus:border-primary
+                                        focus:ring-0 px-0 py-3 font-body-md text-on-surface
+                                        placeholder:text-on-tertiary-container transition-all
+                                        resize-none"
+                                    id="message"
+                                    name="message"
+                                    placeholder="Votre message ou vos impressions sur les tableaux..."
+                                    required=""
+                                    rows="5"
+                                >
+                                </textarea>
+                        </div>
+
+                        <div class="mt-4">
+                                <button class="group flex items-center justify-between w-full md:w-auto md:min-w-[200px] bg-primary text-on-primary px-8 py-4 font-label-sm text-label-sm tracking-widest uppercase hover:opacity-90 transition-all duration-300" type="submit">
+                                        <span class="">Envoyer</span>
+                                        <span class="material-symbols-outlined ml-4 transition-transform duration-300 group-hover:translate-x-1" data-icon="arrow_forward">arrow_forward</span>
+                                </button>
+                        </div>
+                </form>
+
+                <div class="mt-16 pt-8 border-t border-outline-variant/30">
+                        <p class="font-body-md text-body-md italic text-on-surface-variant">
+                            "Chaque œuvre est une conversation silencieuse entre la nature et celui qui la regarde. Vos réflexions sont précieuses."
+                        </p>
+                </div>
+        </div>
 </div>
-<!-- Image: The Studio -->
-<div class="md:col-span-8 md:row-span-2 relative overflow-hidden bg-surface-container-high">
-<img alt="L'Atelier" class="w-full h-full object-cover" data-alt="A wide-angle, minimalist interior shot of a bright artist studio. The walls are white and the floor is light-colored wood, scattered with subtle paint splatters. Several large canvases leaning against the walls depict abstract mountain ranges in earthy tones. The overall mood is peaceful and organized, reflecting a modern gallery aesthetic with high-key lighting and a sophisticated white and charcoal palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDL-SibmCcV5J_JOKauF8ID24cAWst-nSK0js2SJ5kMPzKXd6_y8aZfOrtSnzuKLr8l2Qxb_iHYKnyLV4vCk1HdviMtGnymH2aZVSmxUn-e4yD9rcMThCZYQ9fKfqo2BITOPls4HWks0YrtkrDqsBev_lvAisefWoy6wiXBVqPLF-RYNHJmAJmrJtrwY8ap11nXlBtAemnqDiqns0mfTWy7p-S0-dn8yQZG_HEjHMUv-zKa63iimgUSkKPHSu8T7MnwJ1ptjJyVTkI"/>
+
 </div>
-<!-- Image: Tools -->
-<div class="md:col-span-6 md:row-span-1 relative overflow-hidden bg-surface-container-high">
-<img alt="Pinceaux et pigments" class="w-full h-full object-cover" data-alt="A macro close-up of handmade wooden paintbrushes and a ceramic palette with dried smears of olive green, ochre, and deep slate pigments. The focus is sharp on the natural textures of the bristles and the organic grains of the wood. The lighting is soft and natural, emphasizing a craft-focused, artisanal aesthetic consistent with a high-end minimalist art brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7n0srJEq8o-Gtefgd25UPpggRIQo9ctjAFZB4U-DRxYoxjlHUL-qOLRLo-h50flQnoEsh1IdOnpHhqqruxeabz2Quf76pAMMRNY6ucPgjU6zSVONb74howt-OsEUb9hBH5Qey9UNFad9imlITEUSo9VZ2Iqj5FQuoNY6Ep-Z2n_W92nFfKmJZk7v8OrU31c1GsPg1lsWpfG0JFnAlFI4pkqRm35LsfCXl_utUTbgoLP9FrCKJGJCbxXJkicAB2BWMwmX1KXEhtXU"/>
-</div>
-<!-- Text Block 2 -->
-<div class="md:col-span-6 md:row-span-1 flex flex-col justify-center p-12 bg-surface-container-low border border-outline-variant/20">
-<h3 class="font-headline-md text-headline-md text-primary mb-4">L'Essence du Naturel</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">
-                        Je privilégie les pigments naturels et les huiles de première pression. La matérialité de la peinture doit faire écho à la terre qu'elle représente. Chaque œuvre est une tentative de préserver un instant de calme absolu.
-                    </p>
-</div>
-</div>
-</section>
-<!-- Quote Section -->
-<section class="bg-surface-container-lowest py-32 border-y border-outline-variant/30">
-<div class="max-w-3xl mx-auto px-margin-edge text-center italic">
-<blockquote class="font-headline-lg text-headline-lg text-primary leading-relaxed">
-                    "Je ne cherche pas à copier la nature, mais à exprimer l'émotion que je ressens face à son immensité. Chaque coup de pinceau est un mot de remerciement."
-                </blockquote>
-<cite class="mt-8 block font-label-sm text-label-sm tracking-widest text-outline uppercase not-italic">— Éléonore Dubois</cite>
-</div>
-</section>
-<!-- Signature Work Section -->
-<section class="max-w-container-max mx-auto px-margin-edge py-section-gap">
-<div class="flex flex-col md:flex-row gap-16 items-center">
-<div class="w-full md:w-1/2">
-<div class="aspect-square relative overflow-hidden bg-surface-container-high">
-<img alt="Processus créatif" class="w-full h-full object-cover" data-alt="A minimalist overhead shot of an artist's hands mixing oil paints on a simple glass palette. The colors are muted forest greens and misty greys. The lighting is diffused and soft, creating a high-contrast yet gentle scene. The aesthetic is purely editorial and sophisticated, focusing on the calm movement of the artistic process in a bright, modern light-mode setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFvYDPLBJObOrjoCufngAFPovtGs5T85Bo-tvyEOuBzLvGsPnNmSRjcWM6LA6T-t1QDF9tVY9uHVy75KNXCvFPHSBdeCRCzaeiURJL7DlUohodYCPhIPZY-Wk49vLelhz7YzTPBsvtZaSVUSRt329pyJZWSmR7oox_CYDN-BWI74f7vCH8P22qbnx7B3bz3oIuDavCQZ2DBw-m7kcTU5gCrILVOhts8d04xVAe9WJeA17zeUoQS8vFKB-zYN8mCcrzoVcWF2QvP74"/>
-</div>
-</div>
-<div class="w-full md:w-1/2 space-y-6">
-<h2 class="font-headline-lg text-headline-lg text-primary">Une quête de simplicité</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant">
-                        Dans un monde qui s'accélère, mon travail est une invitation à ralentir. En tant que peintre amateur, je ne suis liée à aucun impératif commercial, seulement à l'authenticité de mon regard.
-                    </p>
-<div class="pt-8">
-<a class="inline-block px-10 py-4 border border-primary text-primary font-label-sm text-label-sm tracking-widest hover:bg-primary hover:text-on-primary transition-all duration-500 uppercase" href="#">
-                            Découvrir ma galerie
-                        </a>
-</div>
-</div>
-</div>
-</section>
 </main>
 <!-- Footer -->
-<footer class="w-full py-12 px-margin-edge flex flex-col md:flex-row justify-between items-center gap-4 text-center mt-section-gap bg-surface dark:bg-surface-dim border-t border-outline-variant/30">
-<div class="font-headline-md text-headline-md text-primary font-notoSerif uppercase">ÉLÉONORE DUBOIS</div>
-<div class="flex flex-wrap justify-center gap-8 font-label-sm text-label-sm tracking-widest text-on-surface-variant dark:text-on-tertiary-container uppercase">
-<a class="hover:text-primary dark:hover:text-primary-fixed transition-colors duration-300" href="#">MENTIONS LÉGALES</a>
-<a class="hover:text-primary dark:hover:text-primary-fixed transition-colors duration-300" href="#">POLITIQUE DE CONFIDENTIALITÉ</a>
-<a class="hover:text-primary dark:hover:text-primary-fixed transition-colors duration-300" href="#">INSTAGRAM</a>
-<a class="hover:text-primary dark:hover:text-primary-fixed transition-colors duration-300" href="#">NEWSLETTER</a>
+<footer class="w-full py-12 px-margin-edge flex flex-col md:flex-row justify-between items-center gap-4 text-center mt-section-gap border-t border-outline-variant/30 bg-surface">
+<div class="font-headline-md text-headline-md text-primary font-notoSerif uppercase">
+            ÉLÉONORE DUBOIS
+        </div>
+<div class="font-label-sm text-label-sm tracking-widest text-on-surface-variant flex flex-wrap justify-center gap-6 md:gap-12">
+<a class="hover:text-primary transition-colors duration-300 uppercase" href="#">MENTIONS LÉGALES</a>
+<a class="hover:text-primary transition-colors duration-300 uppercase" href="#">POLITIQUE DE CONFIDENTIALITÉ</a>
+<a class="hover:text-primary transition-colors duration-300 uppercase" href="#">INSTAGRAM</a>
+<a class="hover:text-primary transition-colors duration-300 uppercase" href="#">NEWSLETTER</a>
 </div>
-<div class="font-label-sm text-label-sm tracking-widest text-on-surface-variant dark:text-on-tertiary-container uppercase">
+<div class="font-label-sm text-label-sm tracking-widest text-on-surface-variant uppercase">
             © 2024 ÉLÉONORE DUBOIS — PEINTURES NATURELLES
         </div>
 </footer>
+
+
 </body></html>

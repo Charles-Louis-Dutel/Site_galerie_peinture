@@ -58,7 +58,48 @@ export default function ContactPage() {
                     <div className="flex flex-col gap-4 md:gap-8 justify-center px-6
                             md:px-12 bg-gray-100">
                         <div>
-                            
+                            {/*form action, target, attribute a ajouter pour le back ?*/}
+                            <form className="flex flex-col gap-10">
+                                <input
+                                    className="w-full bg-transparent py-3 border-b border-gray-300/50
+                                        focus:border-gray-500 transition-colors focus:ring-0
+                                        text-gray-600 placeholder:text-gray-400 outline-none"
+                                    type="text"
+                                    name="name"
+                                    required
+                                    placeholder="Nom"
+                                />
+
+                                <input 
+                                    className="w-full bg-transparent py-3 border-b border-gray-300/50
+                                    focus:border-gray-500 transition-colors focus:ring-0
+                                    text-gray-600 placeholder:text-gray-400 outline-none"
+                                    type="text"
+                                    name="email"
+                                    required
+                                    placeholder="Email"
+                                />
+
+                                <input 
+                                    className="w-full bg-transparent py-3 border-b border-gray-300/50
+                                    focus:border-gray-500 transition-colors focus:ring-0
+                                    text-gray-600 placeholder:text-gray-400 outline-none"
+                                    type="text"
+                                    name="object"
+                                    required
+                                    placeholder="Objet"
+                                />
+
+                                <textarea
+                                    className="w-full bg-transparent my-12 p-3 border border-gray-300/50
+                                    focus:border-gray-500 transition-colors focus:ring-0
+                                    text-gray-600 placeholder:text-gray-400 outline-none"
+                                    name="message"
+                                    required
+                                    placeholder="Votre message"
+                                    rows={5}
+                                />
+                            </form>
                         </div>
                     </div>
                 </div>
