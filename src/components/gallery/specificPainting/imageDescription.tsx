@@ -12,7 +12,7 @@ export default function ImageDescription({ painting }: ImageDescriptionProps) {
         <div className="2xl:col-span-2 flex flex-col w-full gap-4 text-center md:text-start
             md:pl-10 lg:pl-20 md:py-10 lg:py-20 font-serif">
             <div className="py-6 xl:py-20">
-                <h1 className="text-3xl md:text-4xl xl:text-5xl">
+                <h1 className="text-3xl md:text-4xl xl:text-5xl text-gray-600">
                     {painting.title}
                 </h1>
                 <div className="border-b border-gray-300 w-15 md:w-10 py-1
@@ -23,28 +23,28 @@ export default function ImageDescription({ painting }: ImageDescriptionProps) {
 
             <div className="space-y-4 md:space-y-6">
                 <div className="flex flex-col">
-                    <span className="font-sans text-xs xl:text-sm">
+                    <span className="font-sans text-xs xl:text-sm text-gray-500">
                         Technique
                     </span>
-                    <p className="text-xl xl:text-2xl">
+                    <p className="text-xl xl:text-2xl text-gray-600">
                         {painting.medium}
                     </p>
                 </div>
 
                 <div className="flex flex-col">
-                    <span className="font-sans text-xs xl:text-sm">
+                    <span className="font-sans text-xs xl:text-sm text-gray-500">
                         Dimensions
                     </span>
-                    <p className="text-xl xl:text-2xl">
+                    <p className="text-xl xl:text-2xl text-gray-600">
                         {`${painting.width} x ${painting.height} cm`}
                     </p>
                 </div>
 
                 <div className="flex flex-col">
-                    <span className="font-sans text-xs xl:text-sm">
+                    <span className="font-sans text-xs xl:text-sm text-gray-500">
                         Année
                     </span>
-                    <p className="text-xl xl:text-2xl">
+                    <p className="text-xl xl:text-2xl text-gray-600">
                         {painting.year}
                     </p>
                 </div>

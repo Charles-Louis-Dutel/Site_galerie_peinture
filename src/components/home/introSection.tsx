@@ -12,7 +12,7 @@ export default function IntroSection () {
                         <span className='font-serif'>
                             L’univers de Sophie Dutel
                         </span>
-                        <h2 className='font-serif text-4xl text-gray-700'>
+                        <h2 className='font-serif text-4xl text-gray-600'>
                             Des paysages inspirés par la nature
                         </h2>
                         <p className='font-sans text-lg py-6'>
