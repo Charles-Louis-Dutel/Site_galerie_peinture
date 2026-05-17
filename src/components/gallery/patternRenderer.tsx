@@ -251,7 +251,7 @@ export default function PatternRenderer({ paintings, onPaintingClick }: PatternR
     }
 
     return (
-        <div>
+        <section>
             {patterns.map((pattern, index) => {
                 
                 switch (pattern.type)
@@ -296,6 +296,6 @@ export default function PatternRenderer({ paintings, onPaintingClick }: PatternR
                                     onPaintingClick={onPaintingClick} />);
                 }
             })}
-        </div>
+        </section>
     )
 }

@@ -11,7 +11,7 @@ type PaintingProps = {
 export default function PaintingCard({ paintingProps, onPaintingClick }: PaintingProps) {
 
     return (
-        <div style={{aspectRatio: `${paintingProps.imageWidth}/${paintingProps.imageHeight}`}} >
+        <section style={{aspectRatio: `${paintingProps.imageWidth}/${paintingProps.imageHeight}`}} >
             <Image
                 src={ paintingProps.src }
                 alt={ paintingProps.alt }
@@ -19,6 +19,6 @@ export default function PaintingCard({ paintingProps, onPaintingClick }: Paintin
                 className="object-cover transition-transform duration-500 ease-out hover:scale-105"
                 onClick={() => onPaintingClick(paintingProps)}
             />
-        </div>
+        </section>
     );
 }

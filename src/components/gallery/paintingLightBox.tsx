@@ -31,7 +31,7 @@ export default function PaintingLightBox({ painting, onClose }: PaintingLightBox
     }, [onClose]);
 
     return (
-        <div className="relative">
+        <section className="relative">
             <div 
                 className="fixed inset-0 z-50 top-0 left-0 w-full h-full bg-black/70
                     flex flex-col justify-center items-center p-2 lg:p-10 
@@ -84,6 +84,6 @@ export default function PaintingLightBox({ painting, onClose }: PaintingLightBox
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 }

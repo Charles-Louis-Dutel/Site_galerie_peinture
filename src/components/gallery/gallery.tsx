@@ -26,7 +26,7 @@ export default function Gallery ({ paintings }: GalleryProps) {
         <section>
             <div className="w-full px-6 md:px-12 pt-20 pb-64">
                 <div className="max-w-7xl mx-auto text-gray-500">
-                    <div className="flex flex-col w-full items-center gap-8 text-center pb-60">
+                    <section className="flex flex-col w-full items-center gap-8 text-center pb-60">
                         <h1 className="text-4xl md:text-6xl font-serif font-medium">
                             Galerie
                         </h1>
@@ -37,16 +37,16 @@ export default function Gallery ({ paintings }: GalleryProps) {
                             <br className="hidden sm:block"/>
                             {" "}les couleurs et les paysages naturels.
                         </p>
-                    </div>
+                    </section>
 
                     <PatternRenderer paintings={paintings} onPaintingClick={onPaintingClick}/>
 
-                    <div>
+                    <section>
                         {selectedPainting
                             ? <PaintingLightBox painting={selectedPainting} onClose={onClose}/>
                             : <></>
                         }
-                    </div>
+                    </section>
                 </div>
             </div>
 
