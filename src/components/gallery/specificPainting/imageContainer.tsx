@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { Paintings } from "@/src/lib/painting";
+import { Paintings } from "@/src/lib/types/types";
 import '@/src/app/globals.css';
 
 
@@ -33,10 +33,10 @@ export default function ImageContainer({ painting }: ImageContainerProps) {
                 <div className="inline-flex p-3 md:p-5 bg-stone-100 border
                     border-zinc-300/30 ">
                     <Image
-                        src={painting.src}
+                        src={ `https://gnlftjtobxjsayrpswkx.supabase.co/storage/v1/object/public/paintings/${painting.image_path}` }
                         alt={painting.alt}
-                        width={painting.imageWidth}
-                        height={painting.imageHeight}
+                        width={painting.image_width}
+                        height={painting.image_height}
                         className="block w-auto h-auto max-w-full max-h-[75dvh]"
                     />
                 </div>

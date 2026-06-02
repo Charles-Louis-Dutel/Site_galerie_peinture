@@ -1,6 +1,6 @@
 "use client"
 
-import { Paintings } from "@/src/lib/painting"
+import { Paintings } from "@/src/lib/types/types";
 import PatternRenderer from "@/src/components/gallery/patternRenderer";
 import PaintingLightBox from "@/src/components/gallery/paintingLightBox";
 import { useState } from "react";

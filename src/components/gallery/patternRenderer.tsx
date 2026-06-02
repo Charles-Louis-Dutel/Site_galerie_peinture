@@ -1,4 +1,4 @@
-import { Paintings } from "@/src/lib/painting";
+import { Paintings } from "@/src/lib/types/types";
 import PatternA from "@/src/components/gallery/patternA";
 import PatternB from "@/src/components/gallery/patternB";
 import PatternDefault from "@/src/components/gallery/patternDefault";

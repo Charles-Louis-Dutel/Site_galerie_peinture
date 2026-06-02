@@ -1,7 +1,8 @@
-import { Paintings, paintings } from "@/src/lib/painting";
+import { Paintings, paintings } from "@/src/lib/types/types";
 import ImageContainer from "@/src/components/gallery/specificPainting/imageContainer";
 import ImageDescription from "@/src/components/gallery/specificPainting/imageDescription";
 import ArtworkInterestSection from "@/src/components/gallery/specificPainting/interestSection";
+import supabase from "@/src/lib/supabase";
 
 
 export default async function SpecificPaintingPage({
@@ -10,6 +11,7 @@ export default async function SpecificPaintingPage({
     params: Promise<{ paintingName: string }>
 }) {
     const { paintingName } = await params;
+    const { data, error } = await supabase.from("paintings").select().match({ paintingName }).single();
 
     console.log(paintingName);
     const painting: Paintings | undefined = paintings.find((paint) => paint.slug === paintingName);

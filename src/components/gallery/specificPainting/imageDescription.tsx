@@ -1,4 +1,4 @@
-import { Paintings } from "@/src/lib/painting"
+import { Paintings } from "@/src/lib/types/types"
 
 
 type ImageDescriptionProps = {

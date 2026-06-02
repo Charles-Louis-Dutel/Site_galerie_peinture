@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { Paintings } from "@/src/lib/painting"
+import { Paintings } from "@/src/lib/types/types"
 import { useEffect } from "react"
 import '@/src/app/globals.css';
 
@@ -53,11 +53,11 @@ export default function PaintingLightBox({ painting, onClose }: PaintingLightBox
 
                 <div className="relative w-full max-h-[65dvh] lg:max-h-[80dvh] max-w-[90dvw]
                         animate-[imageReveal_320ms_ease-out]"
-                    style={{aspectRatio: `${painting.imageWidth}/${painting.imageHeight}`}}
+                    style={{aspectRatio: `${painting.image_width}/${painting.image_height}`}}
                     onClick={(event) => event.stopPropagation()}
                 >
                     <Image
-                        src={painting.src}
+                        src={ `https://gnlftjtobxjsayrpswkx.supabase.co/storage/v1/object/public/paintings/${painting.image_path}` }
                         alt={painting.alt}
                         fill
                         className="object-contain"

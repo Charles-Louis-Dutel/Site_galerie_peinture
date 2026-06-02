@@ -1,10 +1,15 @@
-import { paintings } from "@/src/lib/painting";
 import Gallery from "@/src/components/gallery/gallery";
+import supabase from "@/src/lib/supabase";
 
-export default function GalleryPage() {
+export default async function GalleryPage() {
+    const { data, error } = await supabase.from("paintings").select("*");
+    
+    console.log(error)
+    console.log(data);
     return (
         <>
-            <Gallery paintings={paintings}/>
+            <Gallery paintings={data ?? []}/>
         </>
     );
 }
+
