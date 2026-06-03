@@ -50,7 +50,7 @@ export default function FormSection() {
                         />
 
                         <button
-                            type="submit"
+                            type="button"
                             className="flex bg-gray-600 text-gray-50 px-8 py-4
                                 tracking-[0.15em] transition-all duration-300
                                 hover:bg-gray-500 hover:-translate-y-0.5 place-self-center
