@@ -1,4 +1,3 @@
-import { Paintings } from "@/src/lib/types/types";
 import ImageContainer from "@/src/components/gallery/specificPainting/imageContainer";
 import ImageDescription from "@/src/components/gallery/specificPainting/imageDescription";
 import ArtworkInterestSection from "@/src/components/gallery/specificPainting/interestSection";
