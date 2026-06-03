@@ -6,9 +6,16 @@ export default async function GalleryPage() {
     
     console.log(error)
     console.log(data);
+
+    if (error)
+    {
+        console.error(error);
+        throw (error);
+    }
+
     return (
         <>
-            <Gallery paintings={data ?? []}/>
+            <Gallery paintings={data}/>
         </>
     );
 }

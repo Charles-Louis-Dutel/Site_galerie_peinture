@@ -1,8 +1,9 @@
-import { Paintings, paintings } from "@/src/lib/types/types";
+import { Paintings } from "@/src/lib/types/types";
 import ImageContainer from "@/src/components/gallery/specificPainting/imageContainer";
 import ImageDescription from "@/src/components/gallery/specificPainting/imageDescription";
 import ArtworkInterestSection from "@/src/components/gallery/specificPainting/interestSection";
 import supabase from "@/src/lib/supabase";
+import { notFound } from "next/navigation";
 
 
 export default async function SpecificPaintingPage({
@@ -11,17 +12,20 @@ export default async function SpecificPaintingPage({
     params: Promise<{ paintingName: string }>
 }) {
     const { paintingName } = await params;
-    const { data, error } = await supabase.from("paintings").select().match({ paintingName }).single();
+    const { data: painting, error } = await supabase.from("paintings")
+                                        .select()
+                                        .eq('slug', paintingName)
+                                        .maybeSingle();
 
-    console.log(paintingName);
-    const painting: Paintings | undefined = paintings.find((paint) => paint.slug === paintingName);
-
-    if (!painting) {
-        return (
-            <div>
-                Tableau introuvable
-            </div>
-        );
+    if (error)
+    {
+        console.error(error);
+        throw error;
+    }
+    
+    if (!painting)
+    {
+        notFound();
     }
 
     return (

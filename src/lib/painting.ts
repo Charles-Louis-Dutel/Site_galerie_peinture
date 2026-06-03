@@ -16,28 +16,6 @@ export type Paintings = {
 }
 
 
-export type Row = {
-    alt: string
-    created_at: string | null
-    description: string | null
-    featured: boolean | null
-    height: number
-    id: string
-    image_height: number
-    image_path: string
-    image_width: number
-    medium: string
-    order_index: number | null
-    orientation: string
-    slug: string
-    status: string | null
-    title: string
-    updated_at: string | null
-    width: number
-    year: number
-}
-
-
 export const paintings = [
     {
 

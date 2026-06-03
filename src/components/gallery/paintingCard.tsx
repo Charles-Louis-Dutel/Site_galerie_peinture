@@ -16,6 +16,7 @@ export default function PaintingCard({ paintingProps, onPaintingClick }: Paintin
                 src={ `https://gnlftjtobxjsayrpswkx.supabase.co/storage/v1/object/public/paintings/${paintingProps.image_path}` }
                 alt={ paintingProps.alt }
                 fill
+                loading="eager"
                 className="object-cover transition-transform duration-500 ease-out hover:scale-105"
                 onClick={() => onPaintingClick(paintingProps)}
             />
