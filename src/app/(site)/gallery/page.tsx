@@ -1,11 +1,9 @@
 import Gallery from "@/src/components/gallery/gallery";
-import supabase from "@/src/lib/supabase/client";
+import { createClient } from "@/src/lib/supabase/client";
 
 export default async function GalleryPage() {
+    const supabase = createClient();
     const { data, error } = await supabase.from("paintings").select("*");
-    
-    console.log(error)
-    console.log(data);
 
     if (error)
     {

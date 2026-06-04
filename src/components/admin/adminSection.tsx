@@ -18,7 +18,7 @@ export default function AdminSection() {
 
                 <div className='flex justify-center text-gray-500'>
                     <Link 
-                        href="/admin/paintingsList"
+                        href="/admin/paintings"
                         className="border border-gray-300 rounded-full px-6 py-3
                                 font-serif transition-colors duration-300
                                 hover:bg-gray-400 hover:text-gray-50">
