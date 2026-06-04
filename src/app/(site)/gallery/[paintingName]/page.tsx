@@ -1,7 +1,7 @@
 import ImageContainer from "@/src/components/gallery/specificPainting/imageContainer";
 import ImageDescription from "@/src/components/gallery/specificPainting/imageDescription";
 import ArtworkInterestSection from "@/src/components/gallery/specificPainting/interestSection";
-import supabase from "@/src/lib/supabase";
+import supabase from "@/src/lib/supabase/client";
 import { notFound } from "next/navigation";
 
 
