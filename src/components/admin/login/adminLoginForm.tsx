@@ -34,7 +34,7 @@ export default function AdminLoginForm() {
 
         if (error)
         {
-            console.log(error);
+            console.error(error);
             setLoginError(true);
             setIsLoading(false);
             return;

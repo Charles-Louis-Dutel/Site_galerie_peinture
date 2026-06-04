@@ -1,6 +1,7 @@
 import Link from "next/link";
+import DisconnectButton from "./disconnectButton";
 
-export default function AdminComponent() {
+export default function AdminSection() {
 
     return (
         <section>
@@ -17,7 +18,7 @@ export default function AdminComponent() {
 
                 <div className='flex justify-center text-gray-500'>
                     <Link 
-                        href="/admin/paintings"
+                        href="/admin/paintingsList"
                         className="border border-gray-300 rounded-full px-6 py-3
                                 font-serif transition-colors duration-300
                                 hover:bg-gray-400 hover:text-gray-50">
@@ -25,13 +26,7 @@ export default function AdminComponent() {
                     </Link>
                 </div>
 
-                <button 
-                    className="border border-gray-300 rounded-full px-6 py-3
-                                font-serif transition-colors duration-300
-                                hover:bg-red-500 hover:text-white text-gray-500"
-                >
-                    Déconnexion
-                </button>
+                <DisconnectButton />
 
                 <div>
                     <Link href="/">
