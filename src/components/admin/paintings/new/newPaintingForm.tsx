@@ -6,8 +6,12 @@ import SecondFormSection from "./secondFormSection";
 
 export default function NewPaintingForm() {
 
+    function handleSubmit() {
+        
+    }
+
     return (
-        <form>
+        <form onSubmit={handleSubmit}>
             <FirstFormSection />
 
             <SecondFormSection />

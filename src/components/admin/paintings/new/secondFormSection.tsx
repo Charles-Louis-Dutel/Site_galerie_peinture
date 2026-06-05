@@ -26,8 +26,10 @@ export default function SecondFormSection() {
                         </label>
                         <div className="flex gap-8">
                             <input 
-                                type="text"
+                                type="number"
                                 name="height"
+                                max={10000}
+                                min={1}
                                 required
                                 placeholder="Hauteur"
                                 className="w-full bg-transparent py-3 border-b 
@@ -39,6 +41,8 @@ export default function SecondFormSection() {
                             <input 
                                 type="text"
                                 name="width"
+                                max={10000}
+                                min={1}
                                 required
                                 placeholder="Largeur"
                                 className="w-full bg-transparent py-3 border-b 
@@ -56,6 +60,8 @@ export default function SecondFormSection() {
                         <input 
                                 type="text"
                                 name="alt"
+                                maxLength={75}
+                                minLength={1}
                                 required
                                 placeholder="Description pour l'accessibilité"
                                 className="w-full bg-transparent py-3 border-b 

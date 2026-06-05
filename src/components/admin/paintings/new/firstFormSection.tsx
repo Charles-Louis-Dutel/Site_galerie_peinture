@@ -90,6 +90,8 @@ export default function FirstFormSection() {
                         <input
                             type="text"
                             name="medium"
+                            maxLength={50}
+                            minLength={1}
                             required
                             placeholder="Acrylique"
                             className="w-full bg-transparent py-3 border-b 
@@ -105,8 +107,10 @@ export default function FirstFormSection() {
                                 ANNÉE DE CRÉATION
                             </label>
                             <input
-                                type="text"
+                                type="number"
                                 name="year"
+                                min={1900}
+                                max={2100}
                                 required
                                 placeholder="2024"
                                 className="w-full bg-transparent py-3 border-b 
