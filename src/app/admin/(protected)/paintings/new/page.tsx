@@ -218,9 +218,26 @@ export default function NewPaintingPage() {
                                     </div>
                                 </div>
 
-                                <div className="flex w-full">
-                                    
-                                </div>
+                                <label className="flex items-center gap-4 cursor-pointer">
+                                    <input
+                                        type="checkbox"
+                                        name="featured"
+                                        className="sr-only peer"
+                                    />
+
+                                    <div
+                                        className="relative w-10 h-6 bg-gray-200 rounded-full
+                                            transition-colors duration-300 peer-checked:bg-gray-500
+                                            after:content-[''] after:absolute after:top-0.5
+                                            after:left-0.5 after:w-5 after:h-5 after:bg-white
+                                            after:rounded-full after:shadow after:transition-transform
+                                            after:duration-300 peer-checked:after:translate-x-4"
+                                    />
+
+                                    <span className="text-sm tracking-wide text-gray-600 uppercase">
+                                        Mise en avant dans la galerie
+                                    </span>
+                                </label>
                             </div>
                         </section>
                     </form>
