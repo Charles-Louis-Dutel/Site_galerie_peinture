@@ -53,10 +53,11 @@ export default function NewPaintingForm() {
 
     const handleSubmit = (event: React.SyntheticEvent<HTMLFormElement>) => {
         event.preventDefault();
+        setFormError(null);
+        setIsLoading(true);
 
         const formData = new FormData(event.currentTarget);
         const values = Object.fromEntries(formData);
-        console.log('Form values: ', values);
 
         const { alt, description, height, imageUpload,
             medium, orientation, title, width, year } = values;
@@ -68,11 +69,12 @@ export default function NewPaintingForm() {
 
         if (!result.success) {
             setFormError("Merci de verifier les informations du formulaire.");
-            console.error(result.error.flatten);
+            setIsLoading(false);
             return;
         }
         
-        const painting = result.data;
+        let painting = result.data;
+        console.log(painting.imageUpload);
     }
 
     return (
@@ -89,7 +91,7 @@ export default function NewPaintingForm() {
                 </div>
             )}
 
-            <ButtonSection />
+            <ButtonSection isLoading={isLoading}/>
         </form>
     );
 }

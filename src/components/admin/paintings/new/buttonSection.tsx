@@ -1,6 +1,10 @@
 
 
-export default function ButtonSection() {
+type ButtonSectionType = {
+    isLoading: boolean;
+}
+
+export default function ButtonSection({ isLoading }: ButtonSectionType) {
 
     return (
         <section>
@@ -14,9 +18,11 @@ export default function ButtonSection() {
             
                 <button
                     type="submit"
-                    className="py-2 px-12 bg-black text-white cursor-pointer hover:bg-black/80"
+                    disabled={isLoading}
+                    className="py-2 px-12 bg-black text-white cursor-pointer
+                        hover:bg-black/80 {}"
                 >
-                        ENREGISTRER L'ŒUVRE
+                        { isLoading ? "Ajout en cours..." : "ENREGISTRER L'ŒUVRE" }
                 </button>
             </div>
         </section>
