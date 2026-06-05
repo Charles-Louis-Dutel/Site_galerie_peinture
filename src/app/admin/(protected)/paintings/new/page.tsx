@@ -37,7 +37,8 @@ export default function NewPaintingPage() {
 
                     <form>
                         <section>
-                            <div className="grid grid-cols-1 md:grid-cols-2 px-6 lg:px-12 py-10 gap-4">
+                            <div className="grid grid-cols-1 md:grid-cols-2 mx-6 lg:mx-12 py-10
+                                gap-4 border-b border-gray-200">
                                 <div className="flex flex-col">
                                     <label>
                                         <span>
@@ -79,6 +80,146 @@ export default function NewPaintingPage() {
                                             />
                                         </div>
                                     </label>
+                                </div>
+
+                                <div className="flex flex-col px-6 lg:px-12 py-10 gap-10">
+                                    <div className="flex flex-col">
+                                        <label>
+                                            TITRE DU TABLEAU
+                                        </label>
+                                        <input
+                                            type="text"
+                                            name="title"
+                                            required
+                                            placeholder="Coucher de soleil"
+                                            className="w-full bg-transparent py-3 border-b 
+                                            border-gray-300/50 focus:border-gray-500 focus:ring-0
+                                            transition-colors text-gray-600 placeholder:text-gray-300
+                                            outline-none"
+                                        />
+                                    </div>
+
+                                    <div className="flex flex-col">
+                                        <label>
+                                            TYPE DE PEINTURE
+                                        </label>
+                                        <input
+                                            type="text"
+                                            name="title"
+                                            required
+                                            placeholder="Acrylique"
+                                            className="w-full bg-transparent py-3 border-b 
+                                            border-gray-300/50 focus:border-gray-500 focus:ring-0
+                                            transition-colors text-gray-600 placeholder:text-gray-300
+                                            outline-none"
+                                        />
+                                    </div>
+
+                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                        <div className="flex flex-col w-full">
+                                            <label>
+                                                ANNÉE DE CRÉATION
+                                            </label>
+                                            <input
+                                                type="text"
+                                                name="title"
+                                                required
+                                                placeholder="2024"
+                                                className="w-full bg-transparent py-3 border-b 
+                                                border-gray-300/50 focus:border-gray-500 focus:ring-0
+                                                transition-colors text-gray-600 placeholder:text-gray-300
+                                                outline-none"
+                                            />
+                                        </div>
+
+                                        <div className="flex flex-col w-full">
+                                            <label>
+                                                ORIENTATION
+                                            </label>
+                                            <select
+                                                name="orientation"
+                                                defaultValue={"Paysage"}
+                                                className="w-full bg-transparent py-3 border-b 
+                                                border-gray-300/50 focus:border-gray-500 focus:ring-0
+                                                transition-colors text-gray-600 placeholder:text-gray-300
+                                                outline-none cursor-pointer"
+                                            >
+                                                <option value={"Paysage"}>Paysage</option>
+                                                <option value={"Portrait"}>Portrait</option>
+                                                <option value={"Carré"}>Carré</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section>
+                            <div className="flex flex-col px-6 lg:px-12 py-10 gap-10">
+                                <div className="flex flex-col">
+                                    <label>
+                                        DESCRIPTION
+                                    </label>
+                                    <textarea
+                                        className="w-full bg-transparent py-3 border-b border-gray-300/50
+                                        focus:border-gray-500 transition-colors focus:ring-0
+                                        text-gray-600 placeholder:text-gray-400 outline-none"
+                                        name="description"
+                                        required
+                                        placeholder="Description du tableau (optionnel)"
+                                        rows={4}
+                                    />
+                                </div>
+
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+                                    <div className="flex flex-col">
+                                        <label>
+                                            DIMENSIONS
+                                        </label>
+                                        <div className="flex gap-8">
+                                            <input 
+                                                type="text"
+                                                name="height"
+                                                required
+                                                placeholder="Hauteur"
+                                                className="w-full bg-transparent py-3 border-b 
+                                                border-gray-300/50 focus:border-gray-500 focus:ring-0
+                                                transition-colors text-gray-600 placeholder:text-gray-300
+                                                outline-none"
+                                            />
+
+                                            <input 
+                                                type="text"
+                                                name="width"
+                                                required
+                                                placeholder="Largeur"
+                                                className="w-full bg-transparent py-3 border-b 
+                                                border-gray-300/50 focus:border-gray-500 focus:ring-0
+                                                transition-colors text-gray-600 placeholder:text-gray-300
+                                                outline-none"
+                                            />
+                                        </div>
+                                    </div>
+
+                                    <div className="flex flex-col w-full">
+                                        <label>
+                                            TEXTE ALTERNATIF 
+                                        </label>
+                                        <input 
+                                                type="text"
+                                                name="alt"
+                                                required
+                                                placeholder="Description pour l'accessibilité"
+                                                className="w-full bg-transparent py-3 border-b 
+                                                border-gray-300/50 focus:border-gray-500 focus:ring-0
+                                                transition-colors text-gray-600 placeholder:text-gray-300
+                                                outline-none"
+                                            />
+                                    </div>
+                                </div>
+
+                                <div className="flex w-full">
+                                    
                                 </div>
                             </div>
                         </section>
