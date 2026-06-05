@@ -1,324 +1,288 @@
-<!DOCTYPE html>
-
-<html class="light" lang="fr"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>L'Atelier Paysage - Administration</title>
+<!DOCTYPE html><html class="light" lang="fr"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>L'Atelier Admin - Ajouter une œuvre</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&amp;family=Noto+Serif:ital,wght@0,400;1,400&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Manrope:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@100..900&amp;family=Noto+Serif:wght@100..900&amp;display=swap" rel="stylesheet">
 <script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                    "surface": "#f9f9f9",
-                    "on-tertiary": "#ffffff",
-                    "tertiary": "#1c1c1b",
-                    "surface-variant": "#e2e2e2",
-                    "on-error": "#ffffff",
-                    "on-primary": "#ffffff",
-                    "tertiary-fixed": "#e4e2e0",
-                    "on-background": "#1a1c1c",
-                    "surface-container-highest": "#e2e2e2",
-                    "secondary": "#6b5777",
-                    "primary-fixed-dim": "#cbc6bf",
-                    "error-container": "#ffdad6",
-                    "surface-bright": "#f9f9f9",
-                    "primary-container": "#33312c",
-                    "primary-fixed": "#e7e2da",
-                    "on-secondary-container": "#6f5b7b",
-                    "error": "#ba1a1a",
-                    "on-tertiary-fixed": "#1b1c1b",
-                    "surface-container": "#eeeeee",
-                    "tertiary-fixed-dim": "#c8c6c4",
-                    "inverse-primary": "#cbc6bf",
-                    "primary": "#1e1c18",
-                    "on-surface-variant": "#49473f",
-                    "on-error-container": "#93000a",
-                    "inverse-surface": "#2f3131",
-                    "tertiary-container": "#313130",
-                    "surface-dim": "#dadada",
-                    "on-secondary-fixed": "#251530",
-                    "inverse-on-surface": "#f1f1f1",
-                    "secondary-fixed": "#f3daff",
-                    "on-secondary-fixed-variant": "#52405e",
-                    "surface-container-lowest": "#ffffff",
-                    "on-primary-container": "#9d9992",
-                    "secondary-fixed-dim": "#d6bee3",
-                    "background": "#f9f9f9",
-                    "secondary-container": "#f0d7fd",
-                    "surface-container-high": "#e8e8e8",
-                    "on-tertiary-container": "#9a9997",
-                    "on-tertiary-fixed-variant": "#474745",
-                    "on-secondary": "#ffffff",
-                    "outline": "#7a776e",
-                    "surface-container-low": "#f3f3f3",
-                    "on-primary-fixed": "#1d1b17",
-                    "surface-tint": "#615e58",
-                    "outline-variant": "#cbc6bc",
-                    "on-surface": "#1a1c1c",
-                    "on-primary-fixed-variant": "#494641"
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed-dim": "#c8c6c4",
+                        "on-surface-variant": "#49473f",
+                        "surface-variant": "#e2e2e2",
+                        "primary-container": "#33312c",
+                        "surface-container-high": "#e8e8e8",
+                        "on-error-container": "#93000a",
+                        "outline-variant": "#cbc6bc",
+                        "on-tertiary-fixed": "#1b1c1b",
+                        "on-tertiary-container": "#9a9997",
+                        "surface-bright": "#f9f9f9",
+                        "on-primary-container": "#9d9992",
+                        "surface-container": "#eeeeee",
+                        "tertiary-container": "#313130",
+                        "on-primary": "#ffffff",
+                        "inverse-surface": "#2f3131",
+                        "surface-dim": "#dadada",
+                        "on-surface": "#1a1c1c",
+                        "surface-tint": "#615e58",
+                        "surface-container-low": "#f3f3f3",
+                        "primary-fixed": "#e7e2da",
+                        "on-secondary": "#ffffff",
+                        "tertiary-fixed": "#e4e2e0",
+                        "inverse-on-surface": "#f1f1f1",
+                        "on-background": "#1a1c1c",
+                        "error": "#ba1a1a",
+                        "secondary": "#6b5777",
+                        "inverse-primary": "#cbc6bf",
+                        "primary": "#1e1c18",
+                        "on-secondary-container": "#6f5b7b",
+                        "surface": "#f9f9f9",
+                        "secondary-fixed": "#f3daff",
+                        "on-error": "#ffffff",
+                        "background": "#f9f9f9",
+                        "secondary-container": "#f0d7fd",
+                        "on-primary-fixed-variant": "#494641",
+                        "primary-fixed-dim": "#cbc6bf",
+                        "tertiary": "#1c1c1b",
+                        "secondary-fixed-dim": "#d6bee3",
+                        "on-secondary-fixed-variant": "#52405e",
+                        "error-container": "#ffdad6",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-primary-fixed": "#1d1b17",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "outline": "#7a776e",
+                        "on-secondary-fixed": "#251530",
+                        "on-tertiary-fixed-variant": "#474745"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-gap": "8rem",
+                        "margin-edge": "4rem",
+                        "grid-gutter": "2rem",
+                        "container-max": "1440px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Noto Serif"],
+                        "label-sm": ["Manrope"],
+                        "body-lg": ["Manrope"],
+                        "headline-display": ["Noto Serif"],
+                        "body-md": ["Manrope"],
+                        "headline-md": ["Noto Serif"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["2.25rem", { "lineHeight": "1.2", "fontWeight": "400" }],
+                        "label-sm": ["0.75rem", { "lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "body-lg": ["1.125rem", { "lineHeight": "1.7", "fontWeight": "400" }],
+                        "headline-display": ["3.5rem", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+                        "body-md": ["1rem", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-md": ["1.5rem", { "lineHeight": "1.3", "fontWeight": "400" }]
+                    }
+                },
             },
-            "borderRadius": {
-                    "DEFAULT": "0.25rem",
-                    "lg": "0.5rem",
-                    "xl": "0.75rem",
-                    "full": "9999px"
-            },
-            "spacing": {
-                    "margin-edge": "4rem",
-                    "container-max": "1440px",
-                    "section-gap": "8rem",
-                    "grid-gutter": "2rem"
-            },
-            "fontFamily": {
-                    "label-sm": ["Manrope", "sans-serif"],
-                    "headline-lg": ["Noto Serif", "serif"],
-                    "headline-display": ["Noto Serif", "serif"],
-                    "headline-md": ["Noto Serif", "serif"],
-                    "body-md": ["Manrope", "sans-serif"],
-                    "body-lg": ["Manrope", "sans-serif"]
-            },
-            "fontSize": {
-                    "label-sm": ["0.75rem", { "lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "600" }],
-                    "headline-lg": ["2.25rem", { "lineHeight": "1.2", "fontWeight": "400" }],
-                    "headline-display": ["3.5rem", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400" }],
-                    "headline-md": ["1.5rem", { "lineHeight": "1.3", "fontWeight": "400" }],
-                    "body-md": ["1rem", { "lineHeight": "1.6", "fontWeight": "400" }],
-                    "body-lg": ["1.125rem", { "lineHeight": "1.7", "fontWeight": "400" }]
-            }
-          },
-        },
-      }
+        }
     </script>
 <style>
-        body { font-family: 'Manrope', sans-serif; }
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
         }
-        /* Custom smooth transition for hover states */
-        .hover-lift {
-            transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        input:focus, textarea:focus, select:focus {
+            outline: none !important;
+            border-color: #1e1c18 !important;
+            box-shadow: none !important;
         }
-        .hover-lift:hover {
-            transform: translateY(-2px);
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #cbc6bc;
         }
     </style>
 </head>
-<body class="bg-surface text-on-surface">
-<!-- Side Navigation Bar -->
-<aside class="h-screen w-64 fixed left-0 top-0 flex flex-col py-8 px-6 bg-surface border-r border-outline-variant/30 z-50">
+<body class="bg-background text-on-surface font-body-md custom-scrollbar overflow-x-hidden">
+<!-- SideNavBar -->
+<aside class="h-screen w-64 fixed left-0 top-0 border-r border-outline-variant/30 bg-surface flex flex-col py-8 px-6 z-50">
 <div class="mb-12">
 <h1 class="font-headline-md text-headline-md text-primary">L'Atelier Admin</h1>
-<p class="font-body-md text-body-md text-on-surface-variant opacity-70">Curator Access</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest mt-1">Curator Access</p>
 </div>
 <nav class="flex-grow space-y-4">
-<a class="flex items-center gap-3 py-2 text-primary font-bold border-r-2 border-primary transition-colors duration-200" href="#">
-<span class="material-symbols-outlined">dashboard</span>
-<span class="font-body-md text-body-md">Dashboard</span>
-</a>
-<a class="flex items-center gap-3 py-2 text-on-surface-variant font-medium hover:text-primary transition-colors duration-200" href="#">
-<span class="material-symbols-outlined">palette</span>
-<span class="font-body-md text-body-md">Gallery</span>
-</a>
-<a class="flex items-center gap-3 py-2 text-on-surface-variant font-medium hover:text-primary transition-colors duration-200" href="#">
-<span class="material-symbols-outlined">mail</span>
-<span class="font-body-md text-body-md">Inquiries</span>
-</a>
-<a class="flex items-center gap-3 py-2 text-on-surface-variant font-medium hover:text-primary transition-colors duration-200" href="#">
-<span class="material-symbols-outlined">event</span>
-<span class="font-body-md text-body-md">Exhibitions</span>
-</a>
-<a class="flex items-center gap-3 py-2 text-on-surface-variant font-medium hover:text-primary transition-colors duration-200" href="#">
-<span class="material-symbols-outlined">settings</span>
-<span class="font-body-md text-body-md">Settings</span>
-</a>
+<div class="flex items-center gap-4 text-on-surface-variant font-medium hover:text-primary transition-colors duration-200 cursor-pointer active:opacity-70 group">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-body-md">Dashboard</span>
+</div>
+<div class="flex items-center gap-4 text-primary font-bold border-r-2 border-primary py-1 cursor-pointer active:opacity-70">
+<span class="material-symbols-outlined" data-icon="palette">palette</span>
+<span class="font-body-md">Gallery</span>
+</div>
+<div class="flex items-center gap-4 text-on-surface-variant font-medium hover:text-primary transition-colors duration-200 cursor-pointer active:opacity-70 group">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+<span class="font-body-md">Inquiries</span>
+</div>
+<div class="flex items-center gap-4 text-on-surface-variant font-medium hover:text-primary transition-colors duration-200 cursor-pointer active:opacity-70 group">
+<span class="material-symbols-outlined" data-icon="event">event</span>
+<span class="font-body-md">Exhibitions</span>
+</div>
+<div class="flex items-center gap-4 text-on-surface-variant font-medium hover:text-primary transition-colors duration-200 cursor-pointer active:opacity-70 group">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-body-md">Settings</span>
+</div>
 </nav>
 <div class="mt-auto pt-8 border-t border-outline-variant/20">
-<div class="flex items-center gap-3 mb-6">
-<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center overflow-hidden">
-<img alt="Admin Profile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLtkOxUlW88Bejs2TlMDSjoFWoOQofR97hTxVAa8NUjYeNnLjoG8t0ECtc6EmkvQk-gVbwi8XnOtVdj5hC0h5UzJjo9aJumSxybvuWEyBWUct9c2rs1zHVfJGop-kQRkLrK60L-S2NSOXHnYr89GSd3JUot148ulungAk6RX0Ue2c2zFQrWw9MfG3oXP3YUBU72l-3TeAkQlCvrabqODA3KgY-p-EJMgb93bQeByBchmFFqznjxiEgRpRl4"/>
-</div>
-<div>
-<p class="text-xs font-bold uppercase tracking-wider">Curator</p>
-<p class="text-xs text-on-surface-variant">L'Atelier Admin</p>
-</div>
-</div>
-<button class="w-full py-3 px-4 border border-outline text-label-sm font-label-sm uppercase hover:bg-primary hover:text-on-primary transition-all duration-300">
+<button class="w-full text-left py-2 px-4 border border-primary text-primary font-label-sm text-label-sm uppercase hover:bg-primary hover:text-on-primary transition-all duration-300">
                 View Site
             </button>
 </div>
 </aside>
-<!-- Top App Bar -->
-<header class="fixed top-0 right-0 w-[calc(100%-16rem)] z-40 bg-surface/80 backdrop-blur-md flex justify-between items-center h-20 px-margin-edge border-b border-outline-variant/30">
-<div class="flex items-center gap-4">
-<span class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant">Dashboard</span>
-<span class="text-outline-variant">/</span>
-<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary">Gallery Management</span>
+<!-- TopAppBar -->
+<header class="fixed top-0 right-0 w-[calc(100%-16rem)] z-40 bg-surface/80 backdrop-blur-md border-b border-outline-variant/30 flex justify-between items-center h-20 px-margin-edge">
+<div>
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant tracking-widest">Gallery Management</span>
 </div>
+<div class="flex items-center gap-8">
 <div class="flex items-center gap-6">
-<div class="relative group">
-<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-sm">search</span>
-<input class="pl-10 pr-4 py-1.5 border-b border-outline-variant bg-transparent text-label-sm focus:outline-none focus:border-primary transition-colors" placeholder="RECHERCHER..." type="text"/>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:bg-primary hover:text-on-primary p-2 transition-all duration-300 rounded-full" data-icon="notifications">notifications</span>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:bg-primary hover:text-on-primary p-2 transition-all duration-300 rounded-full" data-icon="account_circle">account_circle</span>
 </div>
-<div class="flex items-center gap-4">
-<span class="material-symbols-outlined cursor-pointer hover:text-primary transition-colors">notifications</span>
-<span class="material-symbols-outlined cursor-pointer hover:text-primary transition-colors">account_circle</span>
-</div>
+<button class="bg-primary text-on-primary font-label-sm text-label-sm uppercase py-3 px-6 active:scale-95 transition-all">
+                Add New Painting
+            </button>
 </div>
 </header>
 <!-- Main Content Canvas -->
-<main class="ml-64 pt-20 min-h-screen flex flex-col">
-<div class="px-margin-edge py-12 max-w-container-max mx-auto w-full">
-<!-- Header Section -->
-<section class="flex justify-between items-end mb-16">
-<div>
-<h2 class="font-headline-display text-headline-display text-primary mb-2">Gestion des Œuvres</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant italic opacity-80">Inventaire complet des peintures de L'Atelier Paysage.</p>
-</div>
-<button class="bg-primary-container text-on-primary-fixed py-4 px-8 flex items-center gap-3 hover:bg-primary transition-all duration-300 cursor-pointer group">
-<span class="material-symbols-outlined text-xl">add</span>
-<span class="font-label-sm text-label-sm uppercase tracking-[0.2em]">Ajouter un nouveau tableau</span>
-</button>
+<main class="ml-64 pt-20 min-h-screen">
+<div class="max-w-[1000px] mx-auto py-16 px-margin-edge">
+<header class="mb-12">
+<h2 class="font-headline-lg text-headline-lg text-primary">Ajouter une nouvelle œuvre</h2>
+<div class="h-px w-24 bg-primary mt-4"></div>
+</header>
+<form class="space-y-12 pb-24">
+<!-- Image Upload Section -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-grid-gutter items-start">
+    <div class="space-y-4">
+        <label class="font-label-sm text-label-sm uppercase text-on-surface-variant block">Sélectionner une image</label>
+        <div class="aspect-[4/5] bg-surface-container-low border border-dashed border-outline-variant flex flex-col items-center justify-center cursor-pointer hover:bg-surface-container-high transition-colors group relative overflow-hidden">
+            <img class="absolute inset-0 w-full h-full object-cover opacity-10 group-hover:opacity-20 transition-opacity" data-alt="A close-up of a blank wooden gallery frame hanging on a pristine, softly lit off-white wall. The lighting is ethereal and diffuse, highlighting the subtle textures of the wall and the fine wood grain of the frame. The overall atmosphere is serene, minimalist, and high-end, evoking the quiet contemplation of a contemporary Parisian art studio." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQeYbNEEz7mvnnv02ycv4MdXg5QDlyquX47fy1JTf79KWOPKWHkc1yc9x7tg6ajpb4QKgUxXYvmNlE-LT7a-SbmY6npqRwDGeQT7OWWqmlDTxyaGLLGHsCmEvclxgRC6AeQdGqkHEiDDaXuTvZHPMxiznqJPozC9xRgJi6WQckhHN9TZ3BFdqQiQiMedWT4Bf0AnnycooDT6ToEEe0ClEPedKMeKlhi_rFDCniA5mF3vKwVgkQDVBzl6CYaYojtxrd5hDKDtHeDJE">
+            <span class="material-symbols-outlined text-4xl text-on-surface-variant mb-2 group-hover:scale-110 transition-transform" data-icon="add_photo_alternate">add_photo_alternate</span>
+            <p class="font-body-md text-on-surface-variant text-center px-8">Cliquez ou glissez une image ici</p>
+        </div>
+    </div>
+    
+    <div class="space-y-8">
+    <!-- Basic Info -->
+    <div class="space-y-2">
+    <label class="font-label-sm text-label-sm uppercase text-on-surface-variant block" for="title">Titre du tableau</label>
+    <input class="w-full bg-transparent border-0 border-b border-outline-variant py-3 font-headline-md text-headline-md placeholder:text-outline-variant focus:border-primary transition-all" id="title" placeholder="L'éveil du matin" type="text">
+    </div>
+    <div class="space-y-2">
+    <label class="font-label-sm text-label-sm uppercase text-on-surface-variant block" for="type">Type de peinture</label>
+    <input class="w-full bg-transparent border-0 border-b border-outline-variant py-2 font-body-md placeholder:text-outline-variant focus:border-primary transition-all" id="type" placeholder="Huile sur toile" type="text">
+    </div>
+    <div class="grid grid-cols-2 gap-4">
+    <div class="space-y-2">
+    <label class="font-label-sm text-label-sm uppercase text-on-surface-variant block" for="year">Année de création</label>
+    <input class="w-full bg-transparent border-0 border-b border-outline-variant py-2 font-body-md placeholder:text-outline-variant focus:border-primary transition-all" id="year" placeholder="2024" type="text">
+    </div>
+    <div class="space-y-2">
+    <label class="font-label-sm text-label-sm uppercase text-on-surface-variant block" for="orientation">Orientation</label>
+    <select class="w-full bg-transparent border-0 border-b border-outline-variant py-2 font-body-md focus:border-primary transition-all appearance-none cursor-pointer" id="orientation">
+    <option>Carré</option>
+    <option selected="">Paysage</option>
+    <option>Portrait</option>
+    </select>
+    </div>
+    </div>
+    </div>
 </section>
-<!-- Table List -->
-<section class="bg-surface-container-lowest overflow-hidden">
-        <div class="w-full border-b border-outline-variant/30 py-4 grid grid-cols-12 gap-4 px-6 text-label-sm font-label-sm uppercase text-on-surface-variant tracking-widest">
-        <div class="col-span-1">Visuel</div>
-        <div class="col-span-5">Titre de l'œuvre</div>
-        <div class="col-span-3">Date d'ajout</div>
-        <div class="col-span-2">Statut</div>
-        <div class="col-span-1 text-right">Actions</div>
-        </div>
-        <!-- Row 1 -->
-        <div class="group grid grid-cols-12 gap-4 px-6 py-8 items-center border-b border-outline-variant/10 hover:bg-surface-container transition-colors duration-300">
-        <div class="col-span-1">
-        <div class="aspect-square w-16 bg-surface-variant overflow-hidden">
-        <img alt="Brumes Matinales sur le Pic" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A detailed oil painting showing misty peaks of a mountain range at dawn. The canvas features soft gradients of charcoal gray, muted terracotta, and ochre, with a visible, expressive brushstroke texture. The overall mood is ethereal and serene, captured in a bright gallery setting with natural lighting." src="https://lh3.googleusercontent.com/aida/AP1WRLtkOxUlW88Bejs2TlMDSjoFWoOQofR97hTxVAa8NUjYeNnLjoG8t0ECtc6EmkvQk-gVbwi8XnOtVdj5hC0h5UzJjo9aJumSxybvuWEyBWUct9c2rs1zHVfJGop-kQRkLrK60L-S2NSOXHnYr89GSd3JUot148ulungAk6RX0Ue2c2zFQrWw9MfG3oXP3YUBU72l-3TeAkQlCvrabqODA3KgY-p-EJMgb93bQeByBchmFFqznjxiEgRpRl4"/>
-        </div>
-        </div>
-        <div class="col-span-5">
-        <h3 class="font-headline-md text-headline-md text-primary">Brumes Matinales sur le Pic</h3>
-        <p class="text-xs text-on-surface-variant font-label-sm uppercase mt-1">Huile sur toile • 120 x 80 cm</p>
-        </div>
-        <div class="col-span-3 font-body-md text-on-surface-variant">
-                                14 Mai 2024
-                        </div>
-        <div class="col-span-2">
-        <span class="px-3 py-1 bg-primary-fixed text-[10px] font-bold uppercase tracking-widest text-primary">Disponible</span>
-        </div>
-        <div class="col-span-1 text-right">
-        <button class="text-on-surface-variant hover:text-error transition-colors p-2" title="Supprimer">
-        <span class="material-symbols-outlined text-xl">delete</span>
-        </button>
-        </div>
-        </div>
-        <!-- Row 2 -->
-        <div class="group grid grid-cols-12 gap-4 px-6 py-8 items-center border-b border-outline-variant/10 hover:bg-surface-container transition-colors duration-300">
-        <div class="col-span-1">
-        <div class="aspect-square w-16 bg-surface-variant overflow-hidden">
-        <img alt="L'Étude des Pigments" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Close up photograph of natural raw pigments in earthy tones including burnt sienna and deep forest green. Several fine-bristled brushes rest on a palette. The lighting is soft and editorial, creating a professional and minimalist atmosphere typical of a high-end art studio." src="https://lh3.googleusercontent.com/aida/AP1WRLsy69Y68Evzb8X0Ne_omF8eKAMSjRiH3dJXfZTxnrJ_L8Y10sd5GsYcB48-3Hwt0voDE-nemiN1zZEI5hyXQQMp8bSnlxcGKKTk3MuuOOyLteaNQZnGP_0arVF4Im6U7kEuIbbkVSRPmuw2YI4l5xBfB5abpJnbINnnZRavtv4wC-jlXB1lZ5-BLNhrDRTquHAhaYrnjLNggQ-lSupxy-rFqRbQgDSpvxIDNBu0IfSmxRelVQQCx2ETOw"/>
-        </div>
-        </div>
-        <div class="col-span-5">
-        <h3 class="font-headline-md text-headline-md text-primary">L'Étude des Pigments</h3>
-        <p class="text-xs text-on-surface-variant font-label-sm uppercase mt-1">Acrylique et Pigments • 60 x 60 cm</p>
-        </div>
-        <div class="col-span-3 font-body-md text-on-surface-variant">
-                                28 Avril 2024
-                        </div>
-        <div class="col-span-2">
-        <span class="px-3 py-1 border border-outline-variant text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Réservé</span>
-        </div>
-        <div class="col-span-1 text-right">
-        <button class="text-on-surface-variant hover:text-error transition-colors p-2" title="Supprimer">
-        <span class="material-symbols-outlined text-xl">delete</span>
-        </button>
-        </div>
-        </div>
-        <!-- Row 3 -->
-        <div class="group grid grid-cols-12 gap-4 px-6 py-8 items-center border-b border-outline-variant/10 hover:bg-surface-container transition-colors duration-300">
-        <div class="col-span-1">
-        <div class="aspect-square w-16 bg-surface-variant overflow-hidden">
-        <img alt="Silence Sylvestre" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A minimalist composition showing artist tools on a wooden desk. Natural bristle brushes in a white ceramic vase sit next to a sketch of a forest landscape on textured paper. The scene is illuminated by soft morning sunlight, creating long, peaceful shadows on the clean surface." src="https://lh3.googleusercontent.com/aida/AP1WRLsd5jOqMYIVet3f7k_QLewjTyqPrIevvLCKEIQur-EuN8wIor0lC2KeoXlYmFbik9GO_rB22uL6SHXc6sAU3gEExoGoGZfA-TOoTf44Lbqb1B5LRWDSrGjffs0IvmEnDMTitIalQai1JPhrfqZjjfmoGN0DdaIl93KsMnwlbm6ZGQNcZXG-6xdO-xeRcxzCyiGWWXkeFLLJKgLdI2IICaR4NOg8lSL0moRNlbnQnNr6ZTcdnvRjTMls0-k"/>
-        </div>
-        </div>
-        <div class="col-span-5">
-        <h3 class="font-headline-md text-headline-md text-primary">Silence Sylvestre</h3>
-        <p class="text-xs text-on-surface-variant font-label-sm uppercase mt-1">Fusain et Gouache • 150 x 100 cm</p>
-        </div>
-        <div class="col-span-3 font-body-md text-on-surface-variant">
-                                12 Avril 2024
-                        </div>
-        <div class="col-span-2">
-        <span class="px-3 py-1 bg-primary-fixed text-[10px] font-bold uppercase tracking-widest text-primary">Disponible</span>
-        </div>
-        <div class="col-span-1 text-right">
-        <button class="text-on-surface-variant hover:text-error transition-colors p-2" title="Supprimer">
-        <span class="material-symbols-outlined text-xl">delete</span>
-        </button>
-        </div>
-        </div>
+<!-- Detailed Section -->
+<section class="space-y-8 pt-8 border-t border-outline-variant/20">
+    <div class="space-y-2">
+    <label class="font-label-sm text-label-sm uppercase text-on-surface-variant block" for="description">Description</label>
+    <textarea class="w-full bg-transparent border-0 border-b border-outline-variant py-2 font-body-md placeholder:text-outline-variant focus:border-primary transition-all resize-none" id="description" placeholder="Décrivez l'émotion et la technique de cette œuvre..." rows="4"></textarea>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-end">
+    <div class="space-y-4">
+    <label class="font-label-sm text-label-sm uppercase text-on-surface-variant block">Dimensions (cm)</label>
+    <div class="flex items-center gap-4">
+    <div class="flex-1">
+    <input class="w-full bg-transparent border-0 border-b border-outline-variant py-2 font-body-md placeholder:text-outline-variant focus:border-primary transition-all" id="height" placeholder="Hauteur" type="number">
+    </div>
+    <span class="text-on-surface-variant">×</span>
+    <div class="flex-1">
+    <input class="w-full bg-transparent border-0 border-b border-outline-variant py-2 font-body-md placeholder:text-outline-variant focus:border-primary transition-all" id="width" placeholder="Largeur" type="number">
+    </div>
+    </div>
+    </div>
+    <div class="space-y-2">
+    <label class="font-label-sm text-label-sm uppercase text-on-surface-variant block" for="alt">Texte alternatif (Alt)</label>
+    <input class="w-full bg-transparent border-0 border-b border-outline-variant py-2 font-body-md placeholder:text-outline-variant focus:border-primary transition-all" id="alt" placeholder="Description pour l'accessibilité" type="text">
+    </div>
+    </div>
+    <!-- Features -->
+    <div class="flex items-center gap-4 pt-4">
+    <label class="relative inline-flex items-center cursor-pointer">
+    <input class="sr-only peer" type="checkbox" value="">
+    <div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+    <span class="ml-3 font-label-sm text-label-sm uppercase text-on-surface-variant">Mise en avant sur la page d'accueil</span>
+    </label>
+    </div>
 </section>
-<!-- Pagination/Footer Actions -->
-<div class="mt-12 flex justify-center items-center gap-8">
-<button class="flex items-center gap-2 text-label-sm font-label-sm uppercase opacity-40 cursor-default">
-<span class="material-symbols-outlined">chevron_left</span>
-                    Précédent
-                </button>
-<div class="flex gap-4">
-<span class="text-label-sm font-label-sm uppercase text-primary border-b border-primary py-1">01</span>
-<span class="text-label-sm font-label-sm uppercase text-on-surface-variant hover:text-primary cursor-pointer transition-colors py-1">02</span>
-<span class="text-label-sm font-label-sm uppercase text-on-surface-variant hover:text-primary cursor-pointer transition-colors py-1">03</span>
-</div>
-<button class="flex items-center gap-2 text-label-sm font-label-sm uppercase text-primary hover:opacity-70 transition-opacity">
-                    Suivant
-                    <span class="material-symbols-outlined">chevron_right</span>
-</button>
-</div>
+<!-- Actions -->
+<footer class="flex items-center justify-end gap-6 pt-12">
+<button class="font-label-sm text-label-sm uppercase text-on-surface-variant hover:text-primary transition-colors py-2 px-6" type="button">
+                        Annuler
+                    </button>
+<button class="bg-primary text-on-primary font-label-sm text-label-sm uppercase py-4 px-12 transition-all hover:bg-primary/90 active:scale-95 shadow-sm" type="submit">
+                        Enregistrer l'œuvre
+                    </button>
+</footer>
+</form>
 </div>
 <!-- Footer -->
-<footer class="w-full bg-surface-container-low mt-auto flex justify-between items-center py-6 px-margin-edge border-t border-outline-variant/20">
-<div class="flex items-center gap-8">
-<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest">© 2024 L'Atelier Paysage. All rights reserved.</span>
-<div class="flex gap-6">
-<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors uppercase" href="#">Support</a>
-<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors uppercase" href="#">Privacy Policy</a>
-<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors uppercase" href="#">System Status</a>
+<footer class="w-full border-t border-outline-variant/20 bg-surface-container-low flex justify-between items-center py-6 px-margin-edge mt-auto">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">© 2024 L'Atelier Paysage. All rights reserved.</span>
 </div>
-</div>
-<div class="flex items-center gap-2 text-on-surface-variant opacity-50">
-<span class="material-symbols-outlined text-sm">bolt</span>
-<span class="font-label-sm text-[10px] uppercase tracking-tighter">System Version 4.2.0</span>
+<div class="flex gap-8">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Support</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">System Status</a>
 </div>
 </footer>
 </main>
 <script>
-        // Simple interaction for the delete buttons
-        document.querySelectorAll('button[title="Supprimer"]').forEach(button => {
-            button.addEventListener('click', function(e) {
-                const row = this.closest('.grid');
-                if (confirm('Êtes-vous sûr de vouloir supprimer cette œuvre de l\'inventaire ?')) {
-                    row.style.opacity = '0';
-                    row.style.transform = 'translateX(20px)';
-                    row.style.transition = 'all 0.5s ease';
-                    setTimeout(() => {
-                        row.remove();
-                    }, 500);
-                }
-            });
+        // Micro-interaction for the file upload area
+        const dropZone = document.querySelector('.aspect-\\[4\\/5\\]');
+        dropZone.addEventListener('mouseenter', () => {
+            dropZone.style.borderColor = '#1e1c18';
+        });
+        dropZone.addEventListener('mouseleave', () => {
+            dropZone.style.borderColor = '';
         });
 
-        // Search bar animation focus
-        const searchInput = document.querySelector('input[type="text"]');
-        searchInput.addEventListener('focus', () => {
-            searchInput.parentElement.classList.add('text-primary');
-        });
-        searchInput.addEventListener('blur', () => {
-            searchInput.parentElement.classList.remove('text-primary');
+        // Simple form handling logic
+        document.querySelector('form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = e.target.querySelector('button[type="submit"]');
+            btn.innerHTML = 'Traitement...';
+            btn.disabled = true;
+            setTimeout(() => {
+                btn.innerHTML = 'Enregistré';
+                btn.classList.replace('bg-primary', 'bg-secondary');
+            }, 1500);
         });
     </script>
 </body></html>

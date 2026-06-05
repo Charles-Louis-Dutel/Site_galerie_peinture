@@ -18,7 +18,7 @@ export default async function PaintingListPage() {
 
     return (
         <section>
-            <div className="w-full py-20 lg:py-32">
+            <div className="w-full py-20">
                 <div className="max-w-7xl mx-auto">
                     <PaintingListHeader />
 
