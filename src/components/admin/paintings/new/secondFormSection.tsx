@@ -39,7 +39,7 @@ export default function SecondFormSection() {
                             />
 
                             <input 
-                                type="text"
+                                type="number"
                                 name="width"
                                 max={10000}
                                 min={1}

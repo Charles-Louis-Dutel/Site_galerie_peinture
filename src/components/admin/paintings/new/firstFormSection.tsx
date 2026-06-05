@@ -56,10 +56,9 @@ export default function FirstFormSection() {
 
                             <input
                                 type="file"
-                                name="file"
+                                name="imageUpload"
                                 accept="image/webp"
                                 onChange={handleFileChange}
-                                required
                                 className="hidden"
                             />
                         </div>
