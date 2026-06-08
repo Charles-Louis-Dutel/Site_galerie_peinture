@@ -6,6 +6,9 @@ import * as z from "zod";
 import ButtonSection from "./buttonSection";
 import FirstFormSection from "./firstFormSection";
 import SecondFormSection from "./secondFormSection";
+import slugify from "@/src/lib/painting/slugify";
+import createFilename from "@/src/lib/painting/createFilename";
+import getImageDimensions from "@/src/lib/painting/getImageDimensions";
 
 
 const FormValues = z.object({
@@ -51,7 +54,7 @@ export default function NewPaintingForm() {
     const [isLoading, setIsLoading] = useState<boolean>(false);
     const [formError, setFormError] = useState<string | null>(null);
 
-    const handleSubmit = (event: React.SyntheticEvent<HTMLFormElement>) => {
+    const handleSubmit = async (event: React.SyntheticEvent<HTMLFormElement>) => {
         event.preventDefault();
         setFormError(null);
         setIsLoading(true);
@@ -74,7 +77,13 @@ export default function NewPaintingForm() {
         }
         
         let painting = result.data;
-        console.log(painting.imageUpload);
+
+        const dimensions = await getImageDimensions(painting.imageUpload);
+        const slug = slugify(painting.title);
+        const filename = createFilename(painting.title);
+        
+        
+        console.log(painting);
     }
 
     return (
