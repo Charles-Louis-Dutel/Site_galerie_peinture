@@ -17,11 +17,13 @@ export default function PaintingListDataRow({ data }: DataRowProps) {
     const [selectedPainting, setSelectedPainting] = useState<Paintings | null>(null);
     const [isDeleteConfirmOpen, setIsDeleteConfirmOpen] = useState<boolean>(false);
 
-    async function deletePainting(id: string) {
-        const { error } = await supabase.from('paintings')
+    async function deletePainting(id: string, image_path: string) {
+        let { error } = await supabase.from('paintings')
                                         .delete()
                                         .eq('id', id);
         
+        await supabase.storage.from('paintings')
+                            .remove([image_path]);
         setSelectedPainting(null);
         router.refresh();
     }
@@ -94,7 +96,7 @@ export default function PaintingListDataRow({ data }: DataRowProps) {
                                         <button
                                             type="button"
                                             className="py-1 px-4 bg-red-500 text-white cursor-pointer"
-                                            onClick={() => deletePainting(selectedPainting.id)}>
+                                            onClick={() => deletePainting(selectedPainting.id, selectedPainting.image_path)}>
                                                 Supprimer
                                         </button>
                                     </div>

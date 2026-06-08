@@ -9,6 +9,9 @@ import SecondFormSection from "./secondFormSection";
 import slugify from "@/src/lib/painting/slugify";
 import createFilename from "@/src/lib/painting/createFilename";
 import getImageDimensions from "@/src/lib/painting/getImageDimensions";
+import uploadFile from "@/src/lib/painting/uploadFile";
+import insertIntoDB from "@/src/lib/painting/insertIntoDB";
+import { redirect } from "next/navigation";
 
 
 const FormValues = z.object({
@@ -82,8 +85,17 @@ export default function NewPaintingForm() {
         const slug = slugify(painting.title);
         const filename = createFilename(painting.title);
         
-        
-        console.log(painting);
+        const paintingInfos = {
+            ...painting,
+            image_width: dimensions.width,
+            image_height: dimensions.height,
+            slug,
+            image_path: filename
+        }
+
+        await uploadFile(paintingInfos.image_path, paintingInfos.imageUpload);
+        await insertIntoDB(paintingInfos);
+        redirect('/admin/paintings');
     }
 
     return (
