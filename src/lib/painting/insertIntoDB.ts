@@ -45,6 +45,8 @@ export default async function insertIntoDB(painting: paintingInfos) {
     
     if (error) 
     {
-        
+        console.log(error);
+        return ({ success: false, errorMessage: error.message, code: error.code });
     }
+    return ({ success: true });
 }

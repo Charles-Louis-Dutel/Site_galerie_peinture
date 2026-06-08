@@ -3,21 +3,12 @@
 import { ChangeEvent, useState } from "react";
 
 
-export default function FirstFormSection() {
+type FirstFormSectionType = {
+    previewUrl: string | null;
+    onFileChange: (event: ChangeEvent<HTMLInputElement>) => void;
+}
 
-    const [selectedFile, setSelectedFile] = useState<File | null>(null);
-    const [previewUrl, setPreviewUrl] = useState<string | null>(null);
-
-    const handleFileChange = (event: ChangeEvent<HTMLInputElement>) => {
-        event.preventDefault();
-        const file = event.target.files?.[0];
-
-        if (!file)
-            return;
-
-        setSelectedFile(file);
-        setPreviewUrl(URL.createObjectURL(file));
-    }
+export default function FirstFormSection({ previewUrl, onFileChange }: FirstFormSectionType) {
 
     return (
         <section>
@@ -58,7 +49,7 @@ export default function FirstFormSection() {
                                 type="file"
                                 name="imageUpload"
                                 accept="image/webp"
-                                onChange={handleFileChange}
+                                onChange={onFileChange}
                                 className="hidden"
                             />
                         </div>

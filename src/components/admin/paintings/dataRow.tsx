@@ -5,6 +5,7 @@ import { Paintings } from "@/src/lib/types/types";
 import { createClient } from "@/src/lib/supabase/client";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import removePaintingImage from "@/src/lib/painting/removePaintingImage";
 
 type DataRowProps = {
     data: Paintings[];
@@ -22,8 +23,12 @@ export default function PaintingListDataRow({ data }: DataRowProps) {
                                         .delete()
                                         .eq('id', id);
         
-        await supabase.storage.from('paintings')
-                            .remove([image_path]);
+        const isDeleted = await removePaintingImage(image_path);
+        if (!isDeleted.success)
+        {
+
+        }
+        
         setSelectedPainting(null);
         router.refresh();
     }
