@@ -10,8 +10,12 @@ export default function PaintingListTitleRow() {
                 Visuel
             </div>
 
-            <div className="col-span-5 px-2">
+            <div className="col-span-2 px-2 pl-4">
                 Titre de l'oeuvre
+            </div>
+
+            <div className="col-span-3 px-2">
+                Infos
             </div>
 
             <div className="col-span-2 px-2">

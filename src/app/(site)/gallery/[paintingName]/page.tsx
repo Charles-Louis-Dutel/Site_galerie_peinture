@@ -1,7 +1,7 @@
 import ImageContainer from "@/src/components/gallery/specificPainting/imageContainer";
 import ImageDescription from "@/src/components/gallery/specificPainting/imageDescription";
 import ArtworkInterestSection from "@/src/components/gallery/specificPainting/interestSection";
-import supabase from "@/src/lib/supabase/client";
+import { createClient } from "@/src/lib/supabase/client";
 import { notFound } from "next/navigation";
 
 
@@ -10,6 +10,7 @@ export default async function SpecificPaintingPage({
 }: {
     params: Promise<{ paintingName: string }>
 }) {
+    const supabase = createClient();
     const { paintingName } = await params;
     const { data: painting, error } = await supabase.from("paintings")
                                         .select()
