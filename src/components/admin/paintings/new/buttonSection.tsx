@@ -1,4 +1,4 @@
-
+import Link from "next/link";
 
 type ButtonSectionType = {
     isLoading: boolean;
@@ -13,7 +13,9 @@ export default function ButtonSection({ isLoading }: ButtonSectionType) {
                     type="button"
                     className="border py-2 px-8 cursor-pointer" 
                     >
+                    <Link href={"/admin/paintings"}>
                         Annuler
+                    </Link>
                 </button>
             
                 <button
