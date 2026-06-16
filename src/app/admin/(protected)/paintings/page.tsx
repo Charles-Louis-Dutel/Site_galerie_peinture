@@ -18,7 +18,7 @@ export default async function PaintingListPage({ searchParams }: PaintingListPro
     const pageSize = 10;
 
     let database = await supabase.from("paintings")
-                                            .select("*", { count: "exact" });
+                                    .select("*", { count: "exact" });
 
     if (database.error)
         throw (database.error);
@@ -35,7 +35,7 @@ export default async function PaintingListPage({ searchParams }: PaintingListPro
     const startingPaint = (currentPage - 1) * pageSize;
     const endingPaint = startingPaint + pageSize - 1;
     database = await supabase.from("paintings")
-                                .select("*")
+                                .select("*", { count: "exact" })
                                 .order("created_at", { ascending: false })
                                 .range(startingPaint, endingPaint);
 

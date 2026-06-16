@@ -14,7 +14,7 @@ export default function PaintingListTitleRow() {
                 Titre de l'oeuvre
             </div>
 
-            <div className="col-span-3 px-2">
+            <div className="col-span-4 px-2">
                 Infos
             </div>
 
