@@ -69,18 +69,21 @@ export default function PaintingLightBox({ painting, onClose }: PaintingLightBox
                         <h2 className="text-lg font-semibold">
                             {painting.title}
                         </h2>
+
                         <p className="pb-2">
-                            {`${painting.width}X${painting.height}cm - ${painting.medium}`}
+                            {painting.width} X {painting.height} cm - {painting.medium}
                         </p>
-                        <button
-                            type="button" 
-                            className="rounded-4xl border p-2 hover:bg-white hover:text-black"
-                            onClick={(event) => event.stopPropagation()}
-                        >
-                            <Link href={`/gallery/${painting.slug}`}>
-                                Voir l’œuvre
-                            </Link>
-                        </button>
+
+                        <Link href={`/gallery/${painting.slug}`}>
+                            <button
+                                type="button" 
+                                className="rounded-4xl border p-2 hover:bg-white
+                                hover:text-black cursor-pointer"
+                                onClick={(event) => event.stopPropagation()}
+                            >
+                                    Voir l’œuvre
+                            </button>
+                        </Link>
                     </div>
                 </div>
             </div>

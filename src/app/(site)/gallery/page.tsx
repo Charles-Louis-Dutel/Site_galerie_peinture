@@ -7,7 +7,6 @@ export default async function GalleryPage() {
 
     if (error)
     {
-        console.error(error);
         throw (error);
     }
 

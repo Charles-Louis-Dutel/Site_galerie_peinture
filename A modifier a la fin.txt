@@ -1,11 +1,14 @@
+
+-Page galerie, modifier l'appel db pour trier en fonction de l'année du tableaux
+
+-Page contact, gérer le formulaire de contact avec le back
+
+-Mettre un pointeur "main" quand on passe sur certains elements
+
+-Clic droit sur image, ouvrir dans un nouvel onglet dl l'image
+
 -Modifier l'image de signature dans la navbar
 
 -Modifier l'image (et les textes ?) dans la section intro 
 
 -Modifier la citation dans le footer ?
-
--Faire une page 'Mentions legales' et 'Politique de confidentialite'
-
--Mettre un pointeur "main" quand on passe sur certains elements
-
--Clic droit sur image, ouvrir dans un nouvel onglet dl l'image
