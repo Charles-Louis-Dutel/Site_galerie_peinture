@@ -14,7 +14,8 @@ export default function ContactSection() {
                     <p className="lg:text-lg text-gray-500">
                         Pour toute question concernant une œuvre ou une demande
                         particulière, vous pouvez me contacter via le formulaire
-                        ci-contre. Je prendrai le temps de vous répondre avec plaisir.
+                        ci-contre ou via mes réseaux sociaux. Je prendrai le temps
+                        de vous répondre avec plaisir.
                     </p>
                 </div>
 

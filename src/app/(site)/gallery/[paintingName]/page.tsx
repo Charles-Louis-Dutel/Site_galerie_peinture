@@ -19,7 +19,6 @@ export default async function SpecificPaintingPage({
 
     if (error)
     {
-        console.error(error);
         throw error;
     }
     

@@ -1,8 +1,4 @@
 
--Page galerie, modifier l'appel db pour trier en fonction de l'année du tableaux
-
--Page contact, gérer le formulaire de contact avec le back
-
 -Mettre un pointeur "main" quand on passe sur certains elements
 
 -Clic droit sur image, ouvrir dans un nouvel onglet dl l'image
@@ -12,3 +8,8 @@
 -Modifier l'image (et les textes ?) dans la section intro 
 
 -Modifier la citation dans le footer ?
+
+
+-Changer "from: 'Acme <onboarding@resend.dev>',
+            to: ['cldutel51@gmail.com'],"
+dans api/contact/route.ts une fois que j'aurais le nom de domaine
