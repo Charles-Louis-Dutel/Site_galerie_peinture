@@ -1,6 +1,4 @@
 
-
-import { success } from "zod";
 import { createClient } from "../supabase/client";
 
 export default async function uploadFile(image_path: string, file: File) {

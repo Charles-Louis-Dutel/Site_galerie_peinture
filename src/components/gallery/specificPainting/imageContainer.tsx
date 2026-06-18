@@ -23,7 +23,7 @@ export default function ImageContainer({ painting }: ImageContainerProps) {
                     <p>{'<'}-{' '}</p>
                     <button 
                         type="button" 
-                        className="nav-link"
+                        className="nav-link cursor-pointer"
                         onClick={() => router.back()}
                     >
                         Retour a la galerie

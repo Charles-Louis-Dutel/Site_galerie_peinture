@@ -16,16 +16,16 @@ export default function ArtworkInterestSection() {
 
             <div className="w-[25dvw] border-b border-gray-200 my-6"></div>
 
-            <button 
-                type="button"
-                className="border py-4 px-8 border-gray-300 rounded-full
-                    font-serif transition-colors duration-300 hover:bg-gray-400
-                    hover:text-gray-50 text-gray-600"
-            >
-                    <Link href="/contact">
-                        Contacter l'artiste
-                    </Link>
-            </button>
+            <Link href="/contact">
+                <button 
+                    type="button"
+                    className="border py-4 px-8 border-gray-300 rounded-full
+                        font-serif transition-colors duration-300 hover:bg-gray-400
+                        hover:text-gray-50 text-gray-600 cursor-pointer"
+                >
+                            Contacter l'artiste
+                </button>
+            </Link>
         </div>
     );
 }

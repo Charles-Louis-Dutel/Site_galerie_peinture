@@ -28,7 +28,8 @@ export default function DisconnectButton() {
                 type="button" 
                 className="border border-gray-300 rounded-full px-6 py-3
                             font-serif transition-colors duration-300
-                            hover:bg-red-500 hover:text-white text-gray-500"
+                            hover:bg-red-500 hover:text-white text-gray-500
+                            cursor-pointer"
                 onClick={disconnect}
             >
                 Déconnexion

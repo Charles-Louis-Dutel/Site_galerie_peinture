@@ -11,7 +11,10 @@ type PaintingProps = {
 export default function PaintingCard({ paintingProps, onPaintingClick }: PaintingProps) {
     
     return (
-        <section style={{aspectRatio: `${paintingProps.image_width}/${paintingProps.image_height}`}} >
+        <section 
+            style={{aspectRatio: `${paintingProps.image_width}/${paintingProps.image_height}`}}
+            className="cursor-pointer"
+        >
             <Image
                 src={ `https://gnlftjtobxjsayrpswkx.supabase.co/storage/v1/object/public/paintings/${paintingProps.image_path}` }
                 alt={ paintingProps.alt }
