@@ -1,6 +1,15 @@
 import IntroSectionAbout from "@/src/components/about/introSectionAbout";
 import PassionSectionAbout from "@/src/components/about/passionSectionAbout";
 import TechnicalSectionAbout from "@/src/components/about/techSectionAbout";
+import { Metadata } from "next";
+
+
+export const metadata: Metadata = {
+    title: "À propos | Sophie Dutel",
+    description: `Découvrez le parcours, les inspirations et la démarche artistique
+            de Sophie Dutel.`,
+};
+
 
 export default function AboutPage() {
     

@@ -1,5 +1,8 @@
 
--Voir le seo
+-Voir le seo (à faire encore avec nom de domaine:
+    -sitemap
+    -robots
+    -google search console)
 
 -Modifier l'image de signature dans la navbar
 

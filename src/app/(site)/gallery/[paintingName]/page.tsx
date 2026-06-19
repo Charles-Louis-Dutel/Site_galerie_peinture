@@ -3,24 +3,60 @@ import ImageDescription from "@/src/components/gallery/specificPainting/imageDes
 import ArtworkInterestSection from "@/src/components/gallery/specificPainting/interestSection";
 import { createClient } from "@/src/lib/supabase/client";
 import { notFound } from "next/navigation";
+import { Metadata } from "next";
 
 
-export default async function SpecificPaintingPage({
-    params,
-}: {
-    params: Promise<{ paintingName: string }>
-}) {
+type SpecificPaintingPageProps = {
+    params: Promise<{ paintingName: string }>;
+};
+
+
+async function getPainting(paintingName: string) {
     const supabase = createClient();
-    const { paintingName } = await params;
+
     const { data: painting, error } = await supabase.from("paintings")
-                                        .select()
-                                        .eq('slug', paintingName)
-                                        .maybeSingle();
+                                                    .select()
+                                                    .eq('slug', paintingName)
+                                                    .maybeSingle();
 
     if (error)
     {
         throw error;
     }
+
+    return (painting);
+}
+
+
+export async function generateMetadata({
+    params,
+}: SpecificPaintingPageProps): Promise<Metadata> {
+    const { paintingName } = await params;
+    const painting = await getPainting(paintingName);
+
+    if (!painting)
+    {
+        return ({
+            title: "Œuvre introuvable",
+            description: "Cette œuvre n'existe pas ou n'est plus disponible.",
+        });
+    }
+
+    return ({
+        title: `${painting.title} | Sophie Dutel`,
+        description: painting.description || 
+        `${painting.title} est une peinture originale réalisé par Sophie Dutel.
+        Découvrez cette œuvre dans la galerie en ligne.`,
+    });
+}
+
+
+export default async function SpecificPaintingPage({
+    params,
+}: SpecificPaintingPageProps) {
+    
+    const { paintingName } = await params;
+    const painting = await getPainting(paintingName);
     
     if (!painting)
     {

@@ -100,6 +100,8 @@ export default function FormSection() {
                             type="text"
                             name="name"
                             required
+                            min={2}
+                            max={50}
                             placeholder="Nom"
                         />
 
@@ -120,6 +122,8 @@ export default function FormSection() {
                             type="text"
                             name="subject"
                             required
+                            min={2}
+                            max={50}
                             placeholder="Objet"
                         />
 
@@ -130,6 +134,8 @@ export default function FormSection() {
                             name="message"
                             required
                             placeholder="Votre message"
+                            minLength={10}
+                            maxLength={2000}
                             rows={5}
                         />
 

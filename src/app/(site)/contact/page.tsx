@@ -1,5 +1,14 @@
 import ContactSection from "@/src/components/contact/contactSection";
 import FormSection from "@/src/components/contact/formSection";
+import { Metadata } from "next";
+
+
+export const metadata: Metadata = {
+    title: "Contact | Sophie Dutel",
+    description: `Contactez Sophie Dutel pour toute demande d'informations
+            concernant les œuvres exposées.`,
+};
+
 
 export default function ContactPage() {
     return (
