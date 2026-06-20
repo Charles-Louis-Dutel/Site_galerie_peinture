@@ -31,7 +31,7 @@ export default function Nav() {
                 text-gray-500 text-lg">
                 <div className="flex justify-start items-center gap-x-8 lg:gap-x-16">
                     <Link href="/" onClick={() => setMenuOpen(false)}>
-                        <Image src="/images/sign.png" alt="Signature" width={150} height={50}
+                        <Image src="/images/sign3.png" alt="Signature" width={150} height={50}
                             className="h-24 w-auto"/>
                     </Link>
                     <div className="hidden md:flex justify-start items-center gap-x-8 lg:gap-x-16">

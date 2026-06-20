@@ -4,8 +4,6 @@
     -robots
     -google search console)
 
--Modifier l'image de signature dans la navbar
-
 -Modifier l'image (et les textes ?) dans la section intro 
 
 -Modifier la citation dans le footer ?
