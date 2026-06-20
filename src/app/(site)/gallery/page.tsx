@@ -3,12 +3,13 @@ import { createClient } from "@/src/lib/supabase/client";
 import { Metadata } from "next";
 
 
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = {
     title: "Galerie | Sophie Dutel",
     description: `Parcourez la galerie complète des œuvres et peintures originales
             de Sophie Dutel.`,
 };
-
 
 export default async function GalleryPage() {
     const supabase = createClient();
