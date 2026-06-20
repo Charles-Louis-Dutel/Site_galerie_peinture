@@ -39,8 +39,8 @@ export async function POST(request: Request) {
 
     try {
         const { data, error } = await resend.emails.send({
-            from: 'Acme <onboarding@resend.dev>',
-            to: ['cldutel51@gmail.com'],
+            from: 'Sophie Dutel Art <contact@sophiedutel-art.fr>',
+            to: ['sophiedutel@gmail.com'],
             replyTo: [result.data.email],
             subject: result.data.subject === "" ? 
                         "Message de la galerie peinture" :

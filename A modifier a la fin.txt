@@ -1,14 +1,4 @@
 
--Voir le seo (à faire encore avec nom de domaine:
-    -sitemap
-    -robots
-    -google search console)
-
 -Modifier l'image (et les textes ?) dans la section intro 
 
 -Modifier la citation dans le footer ?
-
-
--Changer "from: 'Acme <onboarding@resend.dev>',
-            to: ['cldutel51@gmail.com'],"
-dans api/contact/route.ts une fois que j'aurais le nom de domaine

@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 
 
 export const metadata: Metadata = {
+    metadataBase: new URL("https://sophiedutel-art.fr"),
     title: "Sophie Dutel | Peintures originales",
     description: `Découvrez les œuvres originales de Sophie Dutel. Galerie de peintures
         contemporaines, paysages et créations uniques.`,
