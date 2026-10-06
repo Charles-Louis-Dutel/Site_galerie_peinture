@@ -2,3 +2,5 @@
 -Modifier l'image (et les textes ?) dans la section intro 
 
 -Modifier la citation dans le footer ?
+
+-Ajouter partie description sous le tableau dans specificPainting
