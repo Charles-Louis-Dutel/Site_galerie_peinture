@@ -1,5 +1,6 @@
 import ImageContainer from "@/src/components/gallery/specificPainting/imageContainer";
 import ImageDescription from "@/src/components/gallery/specificPainting/imageDescription";
+import PaintingDescription from "@/src/components/gallery/specificPainting/paintingDescription";
 import ArtworkInterestSection from "@/src/components/gallery/specificPainting/interestSection";
 import { createClient } from "@/src/lib/supabase/client";
 import { notFound } from "next/navigation";
@@ -103,6 +104,7 @@ export default async function SpecificPaintingPage({
                 <div className="grid grid-cols-1 md:grid-cols-3 2xl:grid-cols-7 gap-10">
                     <ImageContainer painting={painting} />
                     <ImageDescription painting={painting} />
+                    <PaintingDescription painting={painting} />
                 </div>
             </div>
 
