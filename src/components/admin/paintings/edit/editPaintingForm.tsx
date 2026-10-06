@@ -12,6 +12,7 @@ import uploadFile from "@/src/lib/painting/uploadFile";
 import removePaintingImage from "@/src/lib/painting/removePaintingImage";
 import { Paintings } from "@/src/lib/types/types";
 import updatePaintingInDB from "@/src/lib/painting/updateIntoDB";
+import validateImageFile from "@/src/lib/painting/validateImageFile";
 
 const FormValues = z.object({
     alt: z.string().trim().min(1, "Le texte alternatif est obligatoire"),
@@ -117,6 +118,13 @@ export default function EditPaintingForm({ painting }: EditPaintingFormProps) {
             const hasNewImage = !!newImage;
 
             if (newImage) {
+                const imageError = validateImageFile(newImage);
+                if (imageError) {
+                    setFormError(imageError);
+                    setIsLoading(false);
+                    return;
+                }
+
                 const dimensions = await getImageDimensions(newImage);
                 const filename = createFilename(formPainting.title);
 

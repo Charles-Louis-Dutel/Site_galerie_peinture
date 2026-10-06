@@ -13,6 +13,7 @@ import getImageDimensions from "@/src/lib/painting/getImageDimensions";
 import uploadFile from "@/src/lib/painting/uploadFile";
 import insertIntoDB from "@/src/lib/painting/insertIntoDB";
 import removePaintingImage from "@/src/lib/painting/removePaintingImage";
+import validateImageFile from "@/src/lib/painting/validateImageFile";
 
 
 const FormValues = z.object({
@@ -100,6 +101,14 @@ export default function NewPaintingForm() {
             }
             
             const painting = result.data;
+
+            const imageError = validateImageFile(painting.imageUpload);
+            if (imageError)
+            {
+                setFormError(imageError);
+                setIsLoading(false);
+                return;
+            }
 
             const dimensions = await getImageDimensions(painting.imageUpload);
             const slug = slugify(painting.title);
