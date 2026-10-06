@@ -24,7 +24,7 @@ export default async function insertIntoDB(painting: paintingInfos) {
 
     const supabase = createClient();
 
-    const { data, error } = await supabase.from('paintings')
+    const { error } = await supabase.from('paintings')
                                         .insert([
                                             {
                                                 image_width: painting.image_width,

@@ -85,7 +85,7 @@ export default function NewPaintingForm() {
             const formData = new FormData(event.currentTarget);
             const values = Object.fromEntries(formData);
 
-            const { alt, description, height, imageUpload,
+            const { alt, description, height,
                 medium, orientation, title, width, year } = values;
             const featured: boolean = formData.get("featured") === "on";
             
@@ -99,7 +99,7 @@ export default function NewPaintingForm() {
                 return;
             }
             
-            let painting = result.data;
+            const painting = result.data;
 
             const dimensions = await getImageDimensions(painting.imageUpload);
             const slug = slugify(painting.title);

@@ -13,7 +13,7 @@ export default function PatternB ({ patternBPaints, placement, onPaintingClick }
 
     const featured: Paintings[] = patternBPaints.filter((paint) => paint.featured);
     const normal: Paintings[] = patternBPaints.filter((paint) => !paint.featured);
-    const isLeft: Boolean = placement % 2 === 0 ? true : false;
+    const isLeft: boolean = placement % 2 === 0 ? true : false;
     
     return (
         <div className="py-2">
