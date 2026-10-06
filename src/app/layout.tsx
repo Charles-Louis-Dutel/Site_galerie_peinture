@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     openGraph: {
         title: "Sophie Dutel",
         description: "Découvrez les œuvres originales de Sophie Dutel",
-        images: ["/og-image.jpg"],
+        images: ["/images/og-image.jpg"],
         type: "website",
     },
 };

@@ -1,7 +1,5 @@
-"use client"
-
 import Image from "next/image";
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 import { Paintings } from "@/src/lib/types/types";
 import '@/src/app/globals.css';
 
@@ -12,22 +10,19 @@ type ImageContainerProps = {
 
 
 export default function ImageContainer({ painting }: ImageContainerProps) {
-    
-    const router = useRouter();
-    
+
     return (
         <div className="flex flex-col md:col-span-2 2xl:col-span-4
                 2xl:col-start-2 items-center">
             <div className="flex flex-col items-start">
                 <div className="flex mb-4 md:mb-8 gap-1">
                     <p>{'<'}-{' '}</p>
-                    <button 
-                        type="button" 
+                    <Link
+                        href="/gallery"
                         className="nav-link cursor-pointer"
-                        onClick={() => router.back()}
                     >
                         Retour a la galerie
-                    </button>
+                    </Link>
                 </div>
 
                 <div className="inline-flex p-3 md:p-5 bg-stone-100 border

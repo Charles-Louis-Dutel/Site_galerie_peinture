@@ -6,7 +6,6 @@ import * as z from "zod";
 import ButtonSection from "@/src/components/admin/paintings/new/buttonSection";
 import FirstFormSection from "./firstFormSection";
 import SecondFormSection from "./secondFormSection";
-import slugify from "@/src/lib/painting/slugify";
 import createFilename from "@/src/lib/painting/createFilename";
 import getImageDimensions from "@/src/lib/painting/getImageDimensions";
 import uploadFile from "@/src/lib/painting/uploadFile";
@@ -144,7 +143,8 @@ export default function EditPaintingForm({ painting }: EditPaintingFormProps) {
                 title: formPainting.title,
                 width: formPainting.width,
                 year: formPainting.year,
-                slug: slugify(formPainting.title),
+                // Le slug est conservé : modifier le titre ne doit pas changer l'URL de l'œuvre.
+                slug: painting.slug,
                 image_width,
                 image_height,
                 image_path
