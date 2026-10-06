@@ -63,6 +63,7 @@ export default function PaintingListDataRow({ data }: DataRowProps) {
                                 src={ `https://gnlftjtobxjsayrpswkx.supabase.co/storage/v1/object/public/paintings/${paint.image_path}` }
                                 alt={paint.alt}
                                 fill
+                                sizes="(min-width: 1280px) 192px, 15vw"
                                 loading="eager"
                                 className="object-contain"
                             />
