@@ -33,12 +33,14 @@ export default function FirstFormSection({ painting, previewUrl, onFileChange }:
                             hover:bg-gray-100 hover:border-gray-500">
 
                             {previewUrl ? (
+                                // eslint-disable-next-line @next/next/no-img-element -- Aperçu d'image dans l'admin : next/image n'apporte pas de bénéfice ici.
                                 <img
                                     src={previewUrl}
                                     alt="Nouvelle image"
                                     className="w-full h-full object-contain"
                                 />
                             ) : (
+                                // eslint-disable-next-line @next/next/no-img-element -- Aperçu d'image dans l'admin : next/image n'apporte pas de bénéfice ici.
                                 <img
                                     src={currentImageUrl}
                                     alt={painting.alt}

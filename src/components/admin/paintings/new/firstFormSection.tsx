@@ -26,6 +26,7 @@ export default function FirstFormSection({ previewUrl, onFileChange }: FirstForm
                             hover:bg-gray-100 hover:border-gray-500">
 
                             {previewUrl ? (
+                                // eslint-disable-next-line @next/next/no-img-element -- Aperçu d'image dans l'admin : next/image n'apporte pas de bénéfice ici.
                                 <img
                                     src={previewUrl}
                                     alt="Prévisualisation"

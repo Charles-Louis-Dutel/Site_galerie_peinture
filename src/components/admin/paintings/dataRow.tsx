@@ -31,7 +31,7 @@ export default function PaintingListDataRow({ data }: DataRowProps) {
         
         if (error)
         {
-            setDeleteError("Impossible e supprimer le tableau.");
+            setDeleteError("Impossible de supprimer le tableau.");
             setIsDeleting(false);
             return;
         }
@@ -108,7 +108,10 @@ export default function PaintingListDataRow({ data }: DataRowProps) {
                             </Link>
 
                             <button 
-                                onClick={() => setSelectedPainting(paint)}
+                                onClick={() => {
+                                    setDeleteError(null);
+                                    setSelectedPainting(paint);
+                                }}
                             >
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor"
                                     className="size-6 cursor-pointer hover:text-red-500" 
@@ -135,6 +138,12 @@ export default function PaintingListDataRow({ data }: DataRowProps) {
                                     <p className="pb-6">
                                         Êtes-vous sûr de vouloir supprimer &quot;{selectedPainting.title}&quot; ?
                                     </p>
+
+                                    {deleteError && (
+                                        <p className="text-red-500">
+                                            {deleteError}
+                                        </p>
+                                    )}
 
                                     <div className="flex gap-4 justify-end mt-6">
                                         <button
