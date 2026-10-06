@@ -12,7 +12,7 @@ export default function PaintingListHeader() {
                         </svg>
 
                         <p>
-                            Retour à l'accueil administration du site
+                            Retour à l&apos;accueil administration du site
                         </p>
                     </div>
                 </Link>

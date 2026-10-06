@@ -185,7 +185,7 @@ export default function FormSection() {
                                     <p
                                         className="text-red-500"
                                     >
-                                        Erreur lors de l'envoi du message,
+                                        Erreur lors de l&apos;envoi du message,
                                         {' '}veuillez réessayer.
                                     </p>
                                 }

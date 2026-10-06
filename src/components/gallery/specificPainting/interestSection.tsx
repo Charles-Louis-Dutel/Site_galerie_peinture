@@ -11,7 +11,7 @@ export default function ArtworkInterestSection() {
 
             <p className="max-w-2xl text-gray-500">
                 Pour toutes questions concernant une œuvre ou si vous souhaitez 
-                plus de renseignements, n'hésitez pas à contacter l'artiste.
+                plus de renseignements, n&apos;hésitez pas à contacter l&apos;artiste.
             </p>
 
             <div className="w-[25dvw] border-b border-gray-200 my-6"></div>
@@ -23,7 +23,7 @@ export default function ArtworkInterestSection() {
                         font-serif transition-colors duration-300 hover:bg-gray-400
                         hover:text-gray-50 text-gray-600 cursor-pointer"
                 >
-                            Contacter l'artiste
+                            Contacter l&apos;artiste
                 </button>
             </Link>
         </div>

@@ -27,8 +27,8 @@ export default function PassionSectionAbout() {
                         </h2>
 
                         <p className="md:text-lg text-gray-500">
-                            La plupart des œuvres naissent d'un paysage, d'une lumière ou
-                            d'une atmosphère qui attire particulièrement son regard.
+                            La plupart des œuvres naissent d&apos;un paysage, d&apos;une lumière ou
+                            d&apos;une atmosphère qui attire particulièrement son regard.
                             <br />
                             <br />
                             Les couleurs et les contrastes se construisent ensuite

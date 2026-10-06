@@ -19,7 +19,7 @@ export default function LegalsMentionsPage() {
                         </h2>
                         <p>
                             Le présent site est édité à titre personnel afin de présenter
-                            les œuvres picturales de l'artiste.
+                            les œuvres picturales de l&apos;artiste.
                         </p>
                         <p className="mt-3">
                             Responsable de la publication : <strong>Sophie DUTEL</strong>
@@ -51,8 +51,8 @@ export default function LegalsMentionsPage() {
                             Propriété intellectuelle
                         </h2>
                         <p>
-                            L'ensemble des œuvres, images, photographies, textes et contenus
-                            présents sur ce site sont protégés par le droit d'auteur.
+                            L&apos;ensemble des œuvres, images, photographies, textes et contenus
+                            présents sur ce site sont protégés par le droit d&apos;auteur.
                         </p>
                         <p className="mt-3">
                             Toute reproduction, représentation, modification, publication ou
@@ -66,7 +66,7 @@ export default function LegalsMentionsPage() {
                             Utilisation du site
                         </h2>
                         <p>
-                            Ce site a pour objectif de présenter une sélection d'œuvres
+                            Ce site a pour objectif de présenter une sélection d&apos;œuvres
                             artistiques. Les informations présentes sur le site sont fournies
                             à titre indicatif et peuvent être modifiées à tout moment.
                         </p>

@@ -42,8 +42,8 @@ export default function PolitiqueConfidentialitePage() {
                         </h2>
                         <p>
                             Les messages reçus peuvent être conservés pendant une durée
-                            raisonnable afin d'assurer le suivi des échanges, puis supprimés
-                            lorsqu'ils ne sont plus nécessaires.
+                            raisonnable afin d&apos;assurer le suivi des échanges, puis supprimés
+                            lorsqu&apos;ils ne sont plus nécessaires.
                         </p>
                     </section>
 
@@ -52,7 +52,7 @@ export default function PolitiqueConfidentialitePage() {
                             Vos droits
                         </h2>
                         <p>
-                            Vous pouvez demander l'accès, la rectification ou la suppression
+                            Vous pouvez demander l&apos;accès, la rectification ou la suppression
                             de vos données personnelles à tout moment en écrivant à :
                             <br />
                             <strong>sophiedutel@gmail.com</strong>
@@ -64,7 +64,7 @@ export default function PolitiqueConfidentialitePage() {
                             Cookies
                         </h2>
                         <p>
-                            Ce site n'utilise pas de cookies publicitaires ni de cookies de
+                            Ce site n&apos;utilise pas de cookies publicitaires ni de cookies de
                             suivi à des fins commerciales.
                         </p>
                         <p className="mt-3">

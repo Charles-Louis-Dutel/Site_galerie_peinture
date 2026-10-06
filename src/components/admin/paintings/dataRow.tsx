@@ -133,7 +133,7 @@ export default function PaintingListDataRow({ data }: DataRowProps) {
                                     </h2>
 
                                     <p className="pb-6">
-                                        Êtes-vous sûr de vouloir supprimer "{selectedPainting.title}" ?
+                                        Êtes-vous sûr de vouloir supprimer &quot;{selectedPainting.title}&quot; ?
                                     </p>
 
                                     <div className="flex gap-4 justify-end mt-6">

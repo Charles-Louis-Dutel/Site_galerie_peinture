@@ -20,7 +20,7 @@ export default function EditPaintingFormHeader() {
 
             <div className="flex flex-col w-full px-6 lg:px-12 gap-4 pb-10">
                 <h2 className="text-4xl">
-                    Edition de l'œuvre 
+                    Edition de l&apos;œuvre 
                 </h2>
 
                 <div className="w-32 border text-gray-500">

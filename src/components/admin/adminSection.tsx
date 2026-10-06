@@ -13,7 +13,7 @@ export default function AdminSection() {
                 </h1>
 
                 <p className="text-gray-500">
-                    Espace d'administration
+                    Espace d&apos;administration
                 </p>
 
                 <div className='flex justify-center text-gray-500'>

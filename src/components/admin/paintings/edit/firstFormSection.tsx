@@ -21,10 +21,10 @@ export default function FirstFormSection({ painting, previewUrl, onFileChange }:
                 <div className="flex flex-col">
                     <label>
                         <span>
-                            REMPLACER L'IMAGE
+                            REMPLACER L&apos;IMAGE
                         </span>
                         <p>
-                            L'image actuelle sera conservée si aucun fichier n'est sélectionné.
+                            L&apos;image actuelle sera conservée si aucun fichier n&apos;est sélectionné.
                         </p>
 
                         <div className="flex flex-col justify-center my-2

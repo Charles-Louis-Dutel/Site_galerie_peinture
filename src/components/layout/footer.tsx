@@ -67,7 +67,7 @@ export default function Footer() {
                     </div>
                     <div className='flex justify-center items-center py-4 md:py-6 my-2 border-t
                         border-gray-200 font-serif text-sm text-center italic text-gray-500'>
-                            "Chaque tableau capture la lumière et l'émotion d'un instant."
+                            {"\"Chaque tableau capture la lumière et l'émotion d'un instant.\""}
                     </div>
                 </div>
             </div>

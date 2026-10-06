@@ -13,7 +13,7 @@ export default function NotFound() {
                 </h1>
 
                 <p className="text-lg mb-2">
-                    La page que vous recherchez n'existe pas ou n'est plus disponible.
+                    La page que vous recherchez n&apos;existe pas ou n&apos;est plus disponible.
                 </p>
 
                 <div className="flex flex-col sm:flex-row justify-center gap-4">
@@ -23,7 +23,7 @@ export default function NotFound() {
                             font-serif transition-colors duration-300
                             hover:bg-gray-400 hover:text-gray-50"
                     >
-                        Retour à l'accueil
+                        Retour à l&apos;accueil
                     </Link>
 
                     <Link

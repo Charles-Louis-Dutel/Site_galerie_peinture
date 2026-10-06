@@ -11,7 +11,7 @@ export default function PaintingListTitleRow() {
             </div>
 
             <div className="col-span-2 px-2 pl-4">
-                Titre de l'oeuvre
+                Titre de l&apos;oeuvre
             </div>
 
             <div className="col-span-4 px-2">
@@ -19,7 +19,7 @@ export default function PaintingListTitleRow() {
             </div>
 
             <div className="col-span-2 px-2">
-                Date d'ajout
+                Date d&apos;ajout
             </div>
 
             <div className="col-span-1 col-start-12 px-2">

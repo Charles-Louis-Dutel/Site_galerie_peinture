@@ -10,17 +10,17 @@ export default function TechnicalSectionAbout() {
                 <div className="flex flex-col w-full md:col-span-2 lg:col-span-4 gap-4 md:gap-8
                     justify-center px-6 md:px-12">
                     <h2 className="text-2xl md:text-3xl font-serif text-gray-600">
-                        L'univers de création
+                        L&apos;univers de création
                     </h2>
 
                     <p className="md:text-lg text-gray-500">
-                        La plupart des œuvres sont réalisées à l'acrylique,
+                        La plupart des œuvres sont réalisées à l&apos;acrylique,
                         une technique appréciée pour sa spontanéité et la richesse des
-                        textures qu'elle permet de créer.
+                        textures qu&apos;elle permet de créer.
                         <br />
                         <br />
-                        Certaines peintures sont également travaillées à l'huile, afin
-                        d'explorer d'autres nuances, matières et jeux de lumière.
+                        Certaines peintures sont également travaillées à l&apos;huile, afin
+                        d&apos;explorer d&apos;autres nuances, matières et jeux de lumière.
                     </p>
                 </div>
 
