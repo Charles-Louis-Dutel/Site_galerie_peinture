@@ -1,3 +1,12 @@
+import { Metadata } from "next";
+
+
+export const metadata: Metadata = {
+    title: "Politique de confidentialité | Sophie Dutel",
+    description: "Politique de confidentialité du site de Sophie Dutel : données collectées via le formulaire de contact, utilisation et droits.",
+};
+
+
 export default function PolitiqueConfidentialitePage() {
     return (
         <section className="w-full bg-gray-50 px-6 md:px-12 py-[80] md:py-[120]">

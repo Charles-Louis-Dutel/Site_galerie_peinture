@@ -42,11 +42,45 @@ export async function generateMetadata({
         });
     }
 
-    return ({
-        title: `${painting.title} | Sophie Dutel`,
-        description: painting.description || 
+    const title = `${painting.title} | Sophie Dutel`;
+    const description = painting.description || 
         `${painting.title} est une peinture originale réalisé par Sophie Dutel.
-        Découvrez cette œuvre dans la galerie en ligne.`,
+        Découvrez cette œuvre dans la galerie en ligne.`;
+    // URL relative : résolue en absolu grâce au metadataBase du layout racine.
+    const url = `/gallery/${painting.slug}`;
+    const imageUrl = `https://gnlftjtobxjsayrpswkx.supabase.co/storage/v1/object/public/paintings/${painting.image_path}`;
+
+    return ({
+        title,
+        description,
+        alternates: {
+            canonical: url,
+        },
+        openGraph: {
+            title,
+            description,
+            url,
+            type: "website",
+            images: [
+                {
+                    url: imageUrl,
+                    width: painting.image_width,
+                    height: painting.image_height,
+                    alt: painting.alt,
+                },
+            ],
+        },
+        twitter: {
+            card: "summary_large_image",
+            title,
+            description,
+            images: [
+                {
+                    url: imageUrl,
+                    alt: painting.alt,
+                },
+            ],
+        },
     });
 }
 

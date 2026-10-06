@@ -1,3 +1,11 @@
+import { Metadata } from "next";
+
+
+export const metadata: Metadata = {
+    title: "Mentions légales | Sophie Dutel",
+    description: "Mentions légales du site de Sophie Dutel, artiste peintre : éditeur du site, hébergement et propriété intellectuelle.",
+};
+
 
 export default function LegalsMentionsPage() {
 
