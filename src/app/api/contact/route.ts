@@ -27,8 +27,20 @@ const RequestValues = z.object({
 
 
 export async function POST(request: Request) {
-    const body = await request.json();
-    const { name, email, subject, message, honeypot } = body;
+    let body: unknown;
+
+    try {
+        body = await request.json();
+    } catch {
+        return Response.json({ error: "Erreur dans les données du formulaire." }, { status: 400 });
+    }
+
+    if (!body || typeof body !== "object")
+    {
+        return Response.json({ error: "Erreur dans les données du formulaire." }, { status: 400 });
+    }
+
+    const { name, email, subject, message, honeypot } = body as Record<string, unknown>;
 
     const result = RequestValues.safeParse({ name, email, subject, message });
 
@@ -37,14 +49,17 @@ export async function POST(request: Request) {
         return Response.json({ error: "Erreur dans les données du formulaire." }, { status: 400 });
     }
 
+    // Supprime les retours à la ligne et tabulations de l'objet de l'email.
+    const cleanSubject = result.data.subject.replace(/[\r\n\t]+/g, " ").trim();
+
     try {
-        const { data, error } = await resend.emails.send({
+        const { error } = await resend.emails.send({
             from: 'Sophie Dutel Art <contact@sophiedutel-art.fr>',
             to: ['sophiedutel@gmail.com'],
             replyTo: [result.data.email],
-            subject: result.data.subject === "" ? 
+            subject: cleanSubject === "" ? 
                         "Message de la galerie peinture" :
-                        result.data.subject,
+                        cleanSubject,
             react: EmailTemplate({ 
                     name: result.data.name,
                     body: result.data.message,
@@ -54,13 +69,13 @@ export async function POST(request: Request) {
 
         if (error)
         {
-            console.log(error);
-            return Response.json({ error }, { status : 500 });
+            console.error("Resend error:", error.name, error.statusCode, error.message);
+            return Response.json({ error: "Erreur lors de l'envoi du message." }, { status: 500 });
         }
 
-        return Response.json(data);
+        return Response.json({ ok: true });
     } catch (error) {
-        console.log(error);
-        return Response.json({ error }, { status: 500 });
+        console.error("Contact route error:", error);
+        return Response.json({ error: "Erreur lors de l'envoi du message." }, { status: 500 });
     }
 }

@@ -14,7 +14,7 @@ export function EmailTemplate({ name, email, body }: EmailTemplateProps) {
             <h1>Nouveau message depuis le site</h1>
             <p>Nom: {name}</p>
             <p>Email: {email}</p>
-            <p>Message: {body}</p>
+            <p style={{ whiteSpace: "pre-wrap" }}>Message: {body}</p>
         </div>
     );
 }
