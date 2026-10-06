@@ -25,11 +25,20 @@ export default function PaintingListDataRow({ data }: DataRowProps) {
         setIsDeleting(true);
         setDeleteError(null);
 
-        const { error } = await supabase.from('paintings')
+        const { data: deletedRows, error } = await supabase.from('paintings')
                                         .delete()
-                                        .eq('id', id);
+                                        .eq('id', id)
+                                        .select('id');
         
         if (error)
+        {
+            setDeleteError("Impossible de supprimer le tableau.");
+            setIsDeleting(false);
+            return;
+        }
+
+        // Aucune ligne supprimée (ex. bloquée par une règle RLS) : on ne touche pas à l'image.
+        if (!deletedRows || deletedRows.length === 0)
         {
             setDeleteError("Impossible de supprimer le tableau.");
             setIsDeleting(false);
