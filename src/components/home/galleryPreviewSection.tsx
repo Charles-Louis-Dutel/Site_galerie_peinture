@@ -100,6 +100,7 @@ export default async function GalleryPreviewSection() {
                                             src={`https://gnlftjtobxjsayrpswkx.supabase.co/storage/v1/object/public/paintings/${painting.image_path}`}
                                             alt={painting.alt}
                                             fill
+                                            sizes="(min-width: 1024px) 34vw, (min-width: 640px) 50vw, 100vw"
                                             className='object-contain'
                                         />
                                     </div>

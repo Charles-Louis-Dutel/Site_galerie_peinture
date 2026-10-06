@@ -32,6 +32,7 @@ export default function ImageContainer({ painting }: ImageContainerProps) {
                         alt={painting.alt}
                         width={painting.image_width}
                         height={painting.image_height}
+                        preload
                         className="block w-auto h-auto max-w-full max-h-[75dvh]"
                     />
                 </div>
