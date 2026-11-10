@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Galerie de peinture — Sophie Dutel
 
-## Getting Started
+Site web développé avec **Next.js et TypeScript** pour présenter les œuvres de l'artiste peintre Sophie Dutel.
 
-First, run the development server:
+Ce projet a été conçu et développé pour répondre à un besoin réel : disposer d'une galerie en ligne permettant de présenter les peintures, de consulter leurs caractéristiques et de contacter l'artiste.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Le site comprend également une interface d'administration permettant de gérer les œuvres sans modifier directement le code source.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**Site en ligne :** [sophiedutel-art.fr](https://sophiedutel-art.fr)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Fonctionnalités
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Galerie publique
+- Présentation des œuvres sous forme de galerie responsive.
+- Pages individuelles détaillant chaque peinture : titre, année, technique et dimensions.
+- Mise en avant de certaines réalisations sur la page d'accueil.
+- Pages de présentation de l'artiste et de contact.
+- Optimisation de l'affichage des images.
 
-## Learn More
+### Interface d'administration
+- Authentification et accès réservé à l'administration.
+- Ajout de nouvelles œuvres avec téléchargement d'images.
+- Modification et suppression des peintures existantes.
+- Gestion de l'ordre d'affichage et des œuvres mises en avant.
+- Validation des données saisies.
+- Gestion des images et de leurs dimensions.
 
-To learn more about Next.js, take a look at the following resources:
+### Backend et base de données
+- Stockage des informations des œuvres dans une base PostgreSQL.
+- Utilisation de Supabase pour la base de données et le stockage des images.
+- Gestion des autorisations d'accès avec Row Level Security (RLS).
+- Formulaire de contact avec envoi d'emails via Resend.
+- Validation des données côté serveur.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Stack technique
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+| Technologie | Utilisation |
+|---|---|
+| Next.js | Framework React et routage |
+| React | Interface utilisateur |
+| TypeScript | Développement avec typage statique |
+| Tailwind CSS | Mise en page et responsive design |
+| Supabase | Base de données et stockage |
+| PostgreSQL | Persistance des données |
+| Resend | Envoi d'emails |
+| Vercel | Hébergement et déploiement |
 
-## Deploy on Vercel
+## Compétences mises en œuvre
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Développement full-stack avec Next.js
+- Conception d'interfaces responsive
+- Modélisation et gestion d'une base de données relationnelle
+- Développement d'une interface CRUD
+- Authentification et contrôle des accès
+- Gestion des fichiers et optimisation des images
+- Développement et validation d'API
+- Déploiement et mise en production d'une application web
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Auteur
+
+Charles-Louis Dutel — [GitHub](https://github.com/Charles-Louis-Dutel)
